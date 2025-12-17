@@ -1,3 +1,43 @@
+// Load translations
+fetch("translate/persian.yml")
+  .then((response) => response.text())
+  .then((yamlText) => {
+    const data = jsyaml.load(yamlText);
+    function getValue(key) {
+      const keys = key.split(".");
+      let value = data;
+      for (const k of keys) {
+        value = value[k];
+      }
+      return value;
+    }
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      const value = getValue(key);
+      if (el.tagName === "META") {
+        el.setAttribute("content", value);
+      } else if (el.tagName === "IMG") {
+        el.setAttribute("alt", value);
+      } else {
+        el.textContent = value;
+      }
+    });
+
+    // Typewriter Effect for Hero Title
+    const typewriterElement = document.getElementById("typewriter");
+    const typewriterText = typewriterElement.textContent;
+    typewriterElement.innerHTML = ""; // Clear existing content
+    let index = 0;
+    function typeWriter() {
+      if (index < typewriterText.length) {
+        typewriterElement.innerHTML += typewriterText.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+    typeWriter();
+  });
+
 // Smooth Scrolling for Internal Links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -44,19 +84,3 @@ document.querySelectorAll(".product-card").forEach((card) => {
     card.style.transform = "scale(1)";
   });
 });
-
-// Typewriter Effect for Hero Title
-const typewriterElement = document.getElementById("typewriter");
-const typewriterText = typewriterElement.dataset.text;
-let index = 0;
-
-function typeWriter() {
-  if (index < typewriterText.length) {
-    typewriterElement.innerHTML += typewriterText.charAt(index);
-    index++;
-    setTimeout(typeWriter, 100);
-  }
-}
-
-// Initialize Typewriter Effect
-typeWriter();

@@ -6,8 +6,8 @@
     <!-- Meta tags for character encoding, viewport, and SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دارمان روانکار پارس - تولیدکننده تخصصی روانکار</title>
-    <meta name="description" content="تولیدکننده تخصصی انواع روانکار صنعتی و خودرویی در کرمانشاه، ایران">
+    <title data-i18n="title"></title>
+    <meta name="description" data-i18n="description" content="">
     <!-- Structured Data for AI Search Optimization (LLMO) -->
     <script src="LLMO/structured-data.js"></script>
     <!-- Link to external stylesheet -->
@@ -18,18 +18,18 @@
     <!-- Header Section with Logo -->
     <header>
         <div class="container">
-            <img src="static/images/darman_image_main.png" alt="لوگو دارمان روانکار پارس" class="logo">
+            <img src="static/images/darman_image_main.png" data-i18n="header.logo_alt" alt="" class="logo">
         </div>
     </header>
 
     <!-- Hero Section with Typewriter Title and CTA Buttons -->
     <section class="hero">
         <div class="container">
-            <h1 id="typewriter" data-text="دارمان روانکار پارس | تولیدکننده تخصصی انواع روانکار"></h1>
-            <p>تولید روغن‌های صنعتی و خودرویی با استانداردهای روز</p>
+            <h1 id="typewriter" data-i18n="hero.typewriter"></h1>
+            <p data-i18n="hero.subtitle"></p>
             <div class="cta-buttons">
-                <a href="#contact" class="btn">دریافت مشاوره</a>
-                <a href="#contact" class="btn">تماس با ما</a>
+                <a href="#contact" class="btn" data-i18n="hero.buttons.0"></a>
+                <a href="#contact" class="btn" data-i18n="hero.buttons.1"></a>
             </div>
         </div>
     </section>
@@ -37,22 +37,20 @@
     <!-- About Section: Factory Introduction -->
     <section id="about" class="about">
         <div class="container">
-            <h2>معرفی کارخانه</h2>
-            <p>کارخانه دارمان روانکار پارس به‌عنوان یکی از پیشروترین تولیدکنندگان انواع روغن، گریس و محصولات پایه آب در
-                ایران فعالیت می‌کند. ما با تمرکز بر کیفیت پایدار و تأمین نیازهای صنایع و خودروهای کشور، محصولات خود را
-                با استفاده از فناوری‌های مدرن و مواد اولیه باکیفیت تولید می‌کنیم.</p>
-            <p>✔️ تولید داخلی با تأکید بر خودکفایی</p>
-            <p>✔️ کیفیت پایدار مطابق استانداردهای بین‌المللی</p>
-            <p>✔️ تأمین نیاز صنایع سنگین و خودروهای شخصی</p>
-            <p>✔️ مستقر در کرمانشاه، قلب صنعتی ایران</p>
+            <h2 data-i18n="about.title"></h2>
+            <p data-i18n="about.content"></p>
+            <p data-i18n="about.features.0"></p>
+            <p data-i18n="about.features.1"></p>
+            <p data-i18n="about.features.2"></p>
+            <p data-i18n="about.features.3"></p>
         </div>
     </section>
 
     <!-- Location Section with Embedded Map -->
     <section id="location" class="location">
         <div class="container">
-            <h2>موقعیت کارخانه</h2>
-            <p>کارخانه دارمان روانکار پارس در کرمانشاه، ایران واقع شده است.</p>
+            <h2 data-i18n="location.title"></h2>
+            <p data-i18n="location.content"></p>
             <!-- Embedded OpenStreetMap showing factory location -->
             <iframe
                 src="https://www.openstreetmap.org/export/embed.html?bbox=47.25,34.3,47.28,34.35&layer=mapnik&marker=34.320576,47.267728"
@@ -63,91 +61,91 @@
     <!-- Products Section: Categorized Product Cards -->
     <section id="products" class="products">
         <div class="container">
-            <h2>محصولات ما</h2>
+            <h2 data-i18n="products.title"></h2>
 
             <!-- Industrial Oils Category -->
             <div class="product-category">
-                <h3>روغن‌های صنعتی</h3>
+                <h3 data-i18n="products.categories.industrial_oils.title"></h3>
                 <div class="product-grid">
                     <div class="product-card">
-                        <h4>روغن هیدرولیک</h4>
-                        <p>مناسب برای سیستم‌های هیدرولیکی در ماشین‌آلات صنعتی، با مقاومت بالا در برابر فشار و دما.</p>
+                        <h4 data-i18n="products.categories.industrial_oils.items.hydraulic_oil.title"></h4>
+                        <p data-i18n="products.categories.industrial_oils.items.hydraulic_oil.description"></p>
                     </div>
                     <div class="product-card">
-                        <h4>روغن انتقال حرارت</h4>
-                        <p>طراحی شده برای سیستم‌های خنک‌کننده و انتقال حرارت در صنایع سنگین.</p>
+                        <h4 data-i18n="products.categories.industrial_oils.items.heat_transfer_oil.title"></h4>
+                        <p data-i18n="products.categories.industrial_oils.items.heat_transfer_oil.description"></p>
                     </div>
                     <div class="product-card">
-                        <h4>روغن ترانس</h4>
-                        <p>برای گیربکس‌های صنعتی و انتقال قدرت در ماشین‌آلات کشاورزی و ساختمانی.</p>
+                        <h4 data-i18n="products.categories.industrial_oils.items.trans_oil.title"></h4>
+                        <p data-i18n="products.categories.industrial_oils.items.trans_oil.description"></p>
                     </div>
                     <div class="product-card">
-                        <h4>روغن توربین</h4>
-                        <p>مناسب برای توربین‌های گازی و بخاری در نیروگاه‌ها و صنایع انرژی.</p>
+                        <h4 data-i18n="products.categories.industrial_oils.items.turbine_oil.title"></h4>
+                        <p data-i18n="products.categories.industrial_oils.items.turbine_oil.description"></p>
                     </div>
                 </div>
             </div>
 
             <!-- Automotive Oils Category -->
             <div class="product-category">
-                <h3>روغن‌های خودرویی</h3>
+                <h3 data-i18n="products.categories.automotive_oils.title"></h3>
                 <div class="product-grid">
                     <div class="product-card">
-                        <h4>روغن موتور</h4>
-                        <p>برای موتورهای بنزینی و دیزلی، با فرمولاسیون پیشرفته برای کاهش مصرف سوخت.</p>
+                        <h4 data-i18n="products.categories.automotive_oils.items.engine_oil.title"></h4>
+                        <p data-i18n="products.categories.automotive_oils.items.engine_oil.description"></p>
                     </div>
                     <div class="product-card">
-                        <h4>روغن گیربکس</h4>
-                        <p>مناسب برای گیربکس دستی و اتوماتیک خودروهای سبک و سنگین.</p>
+                        <h4 data-i18n="products.categories.automotive_oils.items.gearbox_oil.title"></h4>
+                        <p data-i18n="products.categories.automotive_oils.items.gearbox_oil.description"></p>
                     </div>
                     <div class="product-card">
-                        <h4>روغن هیدرولیک</h4>
-                        <p>برای سیستم‌های ترمز و فرمان هیدرولیکی در خودروها.</p>
+                        <h4 data-i18n="products.categories.automotive_oils.items.hydraulic_oil.title"></h4>
+                        <p data-i18n="products.categories.automotive_oils.items.hydraulic_oil.description"></p>
                     </div>
                     <div class="product-card">
-                        <h4>روغن ترمز</h4>
-                        <p>با نقطه جوش بالا برای ایمنی ترمز در شرایط سخت.</p>
+                        <h4 data-i18n="products.categories.automotive_oils.items.brake_oil.title"></h4>
+                        <p data-i18n="products.categories.automotive_oils.items.brake_oil.description"></p>
                     </div>
                 </div>
             </div>
 
             <!-- Grease Category -->
             <div class="product-category">
-                <h3>گریس</h3>
+                <h3 data-i18n="products.categories.grease.title"></h3>
                 <div class="product-grid">
                     <div class="product-card">
-                        <h4>گریس صنعتی</h4>
-                        <p>برای روانکاری یاتاقان‌ها و قطعات متحرک، با تحمل فشار و دمای بالا.</p>
+                        <h4 data-i18n="products.categories.grease.items.industrial_grease.title"></h4>
+                        <p data-i18n="products.categories.grease.items.industrial_grease.description"></p>
                     </div>
                 </div>
             </div>
 
             <!-- Cutting Fluid Category -->
             <div class="product-category">
-                <h3>آب صابون</h3>
+                <h3 data-i18n="products.categories.cutting_fluid.title"></h3>
                 <div class="product-grid">
                     <div class="product-card">
-                        <h4>آب صابون صنعتی</h4>
-                        <p>مناسب برای ماشین‌کاری و صنایع فلزی، با خاصیت خنک‌کننده و روان‌کننده.</p>
+                        <h4 data-i18n="products.categories.cutting_fluid.items.industrial_cutting_fluid.title"></h4>
+                        <p data-i18n="products.categories.cutting_fluid.items.industrial_cutting_fluid.description"></p>
                     </div>
                 </div>
             </div>
 
             <!-- Water-Based Products Category -->
             <div class="product-category">
-                <h3>محصولات پایه آب</h3>
+                <h3 data-i18n="products.categories.water_based.title"></h3>
                 <div class="product-grid">
                     <div class="product-card">
-                        <h4>ضد یخ</h4>
-                        <p>برای سیستم خنک‌کننده خودروها در فصل زمستان.</p>
+                        <h4 data-i18n="products.categories.water_based.items.antifreeze.title"></h4>
+                        <p data-i18n="products.categories.water_based.items.antifreeze.description"></p>
                     </div>
                     <div class="product-card">
-                        <h4>آب رادیاتور</h4>
-                        <p>برای سیستم خنک‌کننده موتورهای خودرو و صنعتی.</p>
+                        <h4 data-i18n="products.categories.water_based.items.radiator_water.title"></h4>
+                        <p data-i18n="products.categories.water_based.items.radiator_water.description"></p>
                     </div>
                     <div class="product-card">
-                        <h4>آب باتری</h4>
-                        <p>برای شارژ و نگهداری باتری‌های اسیدی.</p>
+                        <h4 data-i18n="products.categories.water_based.items.battery_water.title"></h4>
+                        <p data-i18n="products.categories.water_based.items.battery_water.description"></p>
                     </div>
                 </div>
             </div>
@@ -157,13 +155,13 @@
     <!-- Advantages Section: Why Choose Us -->
     <section id="advantages" class="advantages">
         <div class="container">
-            <h2>چرا دارمان روانکار پارس؟</h2>
+            <h2 data-i18n="advantages.title"></h2>
             <ul>
-                <li>تولید مطابق نیاز بازار ایران و استانداردهای داخلی</li>
-                <li>کیفیت پایدار با کنترل کیفیت پیشرفته</li>
-                <li>قیمت رقابتی و مناسب برای خرید عمده</li>
-                <li>پشتیبانی فنی تخصصی برای مشتریان</li>
-                <li>امکان همکاری نمایندگی در سراسر کشور</li>
+                <li data-i18n="advantages.list.0"></li>
+                <li data-i18n="advantages.list.1"></li>
+                <li data-i18n="advantages.list.2"></li>
+                <li data-i18n="advantages.list.3"></li>
+                <li data-i18n="advantages.list.4"></li>
             </ul>
         </div>
     </section>
@@ -171,99 +169,67 @@
     <!-- Brand Introduction Section for Rich Snippet and LLM -->
     <section id="brand-intro" class="brand-intro">
         <div class="container">
-            <p>دارمان روانکار پارس یک شرکت ایرانی پیشرو در تولید روانکارهای صنعتی و خودرویی است.
-                این شرکت با تولید روغن موتور، روغن گیربکس، روغن هیدرولیک، روغن ترمز، گریس صنعتی و محصولات پایه آب،
-                به صنایع و بازار خودروهای داخلی خدمت می‌کند. کیفیت، اعتماد و نوآوری از اصول کلیدی این برند است.</p>
+            <p data-i18n="brand_intro.content"></p>
         </div>
     </section>
 
     <!-- FAQ Section for AI-Friendly Q&A -->
     <section id="faq-llm" class="faq">
         <div class="container">
-            <h2>سوالات متداول</h2>
+            <h2 data-i18n="faq.title"></h2>
 
-            <h3>دارمان روانکار پارس چه محصولاتی تولید می‌کند؟</h3>
-            <p>
-                این شرکت تولیدکننده روانکارهای صنعتی و خودرویی شامل روغن موتور، روغن گیربکس، روغن هیدرولیک، روغن ترمز،
-                روغن توربین، روغن ترانس، گریس صنعتی و محصولات پایه آب مانند ضد یخ و آب رادیاتور است.
-            </p>
+            <h3 data-i18n="faq.questions.0.question"></h3>
+            <p data-i18n="faq.questions.0.answer"></p>
 
-            <h3>محصولات دارمان روانکار پارس برای چه کاربردهایی مناسب هستند؟</h3>
-            <p>
-                روغن‌ها و گریس‌های دارمان روانکار پارس برای ماشین‌آلات صنعتی، خودروهای سبک و سنگین، سیستم‌های هیدرولیک،
-                گیربکس‌ها، توربین‌ها و سیستم‌های خنک‌کننده طراحی شده‌اند.
-            </p>
+            <h3 data-i18n="faq.questions.1.question"></h3>
+            <p data-i18n="faq.questions.1.answer"></p>
 
-            <h3>کارخانه دارمان روانکار پارس کجاست؟</h3>
-            <p>
-                این کارخانه در استان کرمانشاه، ایران مستقر است و محصولات خود را به صنایع مختلف و بازار داخلی عرضه
-                می‌کند.
-            </p>
+            <h3 data-i18n="faq.questions.2.question"></h3>
+            <p data-i18n="faq.questions.2.answer"></p>
 
-            <h3>چرا باید دارمان روانکار پارس را انتخاب کنیم؟</h3>
-            <p>
-                دارمان روانکار پارس با کیفیت پایدار، کنترل کیفیت پیشرفته، قیمت رقابتی و پشتیبانی فنی تخصصی، گزینه‌ای
-                قابل اعتماد برای مشتریان و نمایندگی‌ها است.
-            </p>
+            <h3 data-i18n="faq.questions.3.question"></h3>
+            <p data-i18n="faq.questions.3.answer"></p>
         </div>
     </section>
 
     <!-- Mission and Vision Section for LLM Trust -->
     <section id="mission-llm" class="mission">
         <div class="container">
-            <h2>ماموریت و چشم‌انداز</h2>
-            <p>
-                ماموریت ما تولید روانکارهایی باکیفیت و پایدار است که عملکرد بهینه، ایمنی و طول عمر تجهیزات صنعتی و
-                خودروها را تضمین می‌کنند. دارمان روانکار پارس با تمرکز بر نوآوری، استانداردهای بین‌المللی و نیاز واقعی
-                مشتریان، همواره در مسیر ارائه محصولاتی قابل اعتماد و مؤثر حرکت می‌کند.
-            </p>
-            <p>
-                چشم‌انداز ما
-                چشم‌انداز دارمان روانکار پارس تبدیل شدن به مرجع اصلی تولید روانکارهای صنعتی و خودرویی در ایران و ارتقای
-                استانداردهای کیفی صنعت روانکار است. ما به دنبال ایجاد اعتماد پایدار در مشتریان، بهینه‌سازی هزینه‌های
-                عملیاتی و ارتقای عملکرد ماشین‌آلات و خودروها هستیم تا هر محصول ما نماینده تعهد، تخصص و نوآوری برند
-                دارمان باشد.
-            </p>
+            <h2 data-i18n="mission.title"></h2>
+            <p data-i18n="mission.mission"></p>
+            <p data-i18n="mission.vision"></p>
         </div>
     </section>
 
     <!-- Company Identity Section for LLM Understanding -->
     <section id="about-llm" class="about-llm">
         <div class="container">
-            <h2>هویت و معرفی دارمان روانکار پارس</h2>
-            <p>
-                دارمان روانکار پارس، قلب تپنده تولید روانکارهای صنعتی و خودرویی در کرمانشاه است. این شرکت با تلفیق دانش
-                فنی پیشرفته و مواد اولیه باکیفیت، محصولاتی تولید می‌کند که عملکرد بالا و دوام طولانی را تضمین می‌کنند.
-                دارمان روانکار پارس همواره در تلاش است تا نیازهای صنایع و خودروهای ایرانی را با محصولاتی قابل اعتماد،
-                ایمن و کارآمد برآورده سازد.
-            </p>
-            <p>
-                مجموعه محصولات ما شامل روغن موتور، روغن گیربکس، روغن هیدرولیک، روغن ترمز، روغن توربین، روغن ترانس، گریس
-                صنعتی و محصولات پایه آب مانند ضد یخ و آب رادیاتور است. با تیم فنی متخصص و سیستم‌های کنترل کیفیت پیشرفته،
-                هر محصول دارمان روانکار پارس نماینده تعهد ما به کیفیت، نوآوری و اعتماد مشتریان است. ما باور داریم که هر
-                قطره روانکار، تضمین‌کننده عملکرد بی‌نقص ماشین‌آلات و خودروهاست.
-            </p>
+            <h2 data-i18n="about_llm.title"></h2>
+            <p data-i18n="about_llm.content1"></p>
+            <p data-i18n="about_llm.content2"></p>
         </div>
     </section>
 
     <!-- Call to Action Section -->
     <section id="contact" class="cta">
         <div class="container">
-            <h2>برای همکاری یا خرید عمده با ما در تماس باشید</h2>
-            <a href="tel:+989329726349" class="btn">تماس با ما</a>
+            <h2 data-i18n="cta.title"></h2>
+            <a href="tel:+989219726349" class="btn" data-i18n="cta.button"></a>
         </div>
     </section>
 
     <!-- Footer Section with Company Info -->
     <footer>
         <div class="container">
-            <p>دارمان روانکار پارس</p>
-            <p>موقعیت: کرمانشاه، ایران</p>
-            <p>شماره تماس: <span dir="ltr">0921 972 6349</span></p>
-            <p>&copy; <span id="year"></span> دارمان روانکار پارس. تمامی حقوق محفوظ است.</p>
+            <p data-i18n="footer.company"></p>
+            <p data-i18n="footer.location"></p>
+            <p><span data-i18n="footer.phone_label"></span> <span dir="ltr" data-i18n="footer.phone_number"></span></p>
+            <p>&copy; <span id="year"></span> <span data-i18n="footer.copyright"></span></p>
         </div>
     </footer>
 
+    <!-- YAML parsing library -->
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
     <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 </body>
