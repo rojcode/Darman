@@ -195,6 +195,34 @@ section p {
     content: "✔️ ";
 }
 
+/* Brand Introduction Section */
+.brand-intro {
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* FAQ Section */
+.faq {
+    background-color: #fff;
+}
+
+.faq h3 {
+    font-size: 1.3rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+/* Mission Section */
+.mission {
+    background-color: #f8f9fa;
+}
+
+/* About LLM Section */
+.about-llm {
+    background-color: #fff;
+}
+
 /* Call to Action Section: Blue background */
 .cta {
     background-color: #007bff;
