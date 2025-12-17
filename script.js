@@ -53,6 +53,14 @@ function loadLanguage(lang) {
         document.documentElement.lang = "fa";
         document.body.style.direction = "rtl";
       }
+
+      // Update structured data script
+      const existingScript = document.getElementById("structured-data-script");
+      if (existingScript) existingScript.remove();
+      const newScript = document.createElement("script");
+      newScript.src = `LLMO/${lang}-data.js`;
+      newScript.id = "structured-data-script";
+      document.head.appendChild(newScript);
     });
 }
 

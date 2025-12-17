@@ -1,4 +1,4 @@
-// Advanced JSON-LD structured data for Darman Ravankar Pars with product details
+// JSON-LD کامل با offers برای تمام محصولات
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "ManufacturingBusiness",
@@ -38,6 +38,7 @@ const structuredData = {
     "@type": "OfferCatalog",
     name: "محصولات روانکار",
     itemListElement: [
+      // مثال برای همه محصولات با offers
       {
         "@type": "Offer",
         itemOffered: {
@@ -45,7 +46,14 @@ const structuredData = {
           name: "روغن هیدرولیک",
           description: "روغن مخصوص سیستم‌های هیدرولیک صنعتی با مقاومت بالا در برابر فشار و دما.",
           category: "روغن‌های صنعتی",
-          application: "مناسب برای ماشین‌آلات صنعتی و سیستم‌های هیدرولیکی"
+          application: "مناسب برای ماشین‌آلات صنعتی و سیستم‌های هیدرولیکی",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "IRR",
+            price: "1500000",
+            availability: "https://schema.org/InStock",
+            url: "https://rojcode.github.io/Darman/products/roghan-hydraulic"
+          }
         }
       },
       {
@@ -55,7 +63,14 @@ const structuredData = {
           name: "روغن انتقال حرارت",
           description: "روغن تخصصی برای سیستم‌های خنک‌کننده و انتقال حرارت در صنایع سنگین.",
           category: "روغن‌های صنعتی",
-          application: "مورد استفاده در بویلرها، مبدل‌های حرارتی و سیستم‌های صنعتی"
+          application: "مورد استفاده در بویلرها، مبدل‌های حرارتی و سیستم‌های صنعتی",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "IRR",
+            price: "1800000",
+            availability: "https://schema.org/InStock",
+            url: "https://rojcode.github.io/Darman/products/roghan-heat-transfer"
+          }
         }
       },
       {
@@ -65,7 +80,14 @@ const structuredData = {
           name: "روغن ترانس",
           description: "روغن برای گیربکس‌ها و سیستم‌های انتقال قدرت صنعتی و کشاورزی.",
           category: "روغن‌های صنعتی",
-          application: "مورد استفاده در گیربکس‌ها و تجهیزات انتقال نیرو"
+          application: "مورد استفاده در گیربکس‌ها و تجهیزات انتقال نیرو",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "IRR",
+            price: "1600000",
+            availability: "https://schema.org/InStock",
+            url: "https://rojcode.github.io/Darman/products/roghan-trans"
+          }
         }
       },
       {
@@ -75,7 +97,14 @@ const structuredData = {
           name: "روغن توربین",
           description: "روغن مخصوص توربین‌های گازی و بخار با خواص پایدار در دماهای بالا.",
           category: "روغن‌های صنعتی",
-          application: "مورد استفاده در نیروگاه‌ها و صنایع انرژی"
+          application: "مورد استفاده در نیروگاه‌ها و صنایع انرژی",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "IRR",
+            price: "2000000",
+            availability: "https://schema.org/InStock",
+            url: "https://rojcode.github.io/Darman/products/roghan-turbine"
+          }
         }
       },
       {
@@ -85,7 +114,14 @@ const structuredData = {
           name: "روغن موتور",
           description: "روغن موتور با فرمولاسیون پیشرفته برای کاهش مصرف سوخت و افزایش عمر موتور.",
           category: "روغن‌های خودرویی",
-          application: "مناسب برای خودروهای سبک و سنگین بنزینی و دیزلی"
+          application: "مناسب برای خودروهای سبک و سنگین بنزینی و دیزلی",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "IRR",
+            price: "1200000",
+            availability: "https://schema.org/InStock",
+            url: "https://rojcode.github.io/Darman/products/roghan-motor"
+          }
         }
       },
       {
@@ -95,7 +131,14 @@ const structuredData = {
           name: "روغن گیربکس",
           description: "روغن مخصوص گیربکس دستی و اتوماتیک با مقاومت بالا در دما و فشار.",
           category: "روغن‌های خودرویی",
-          application: "مورد استفاده در تمامی خودروها و ماشین‌آلات سبک و سنگین"
+          application: "مورد استفاده در تمامی خودروها و ماشین‌آلات سبک و سنگین",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "IRR",
+            price: "1400000",
+            availability: "https://schema.org/InStock",
+            url: "https://rojcode.github.io/Darman/products/roghan-gearbox"
+          }
         }
       },
       {
@@ -105,7 +148,14 @@ const structuredData = {
           name: "روغن هیدرولیک خودرو",
           description: "روغن برای سیستم‌های ترمز و فرمان هیدرولیکی خودروها.",
           category: "روغن‌های خودرویی",
-          application: "مناسب برای خودروهای سبک و سنگین"
+          application: "مناسب برای خودروهای سبک و سنگین",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "IRR",
+            price: "1300000",
+            availability: "https://schema.org/InStock",
+            url: "https://rojcode.github.io/Darman/products/roghan-car-hydraulic"
+          }
         }
       },
       {
@@ -115,7 +165,14 @@ const structuredData = {
           name: "روغن ترمز",
           description: "روغن ترمز با نقطه جوش بالا برای ایمنی سیستم ترمز در شرایط سخت.",
           category: "روغن‌های خودرویی",
-          application: "مناسب برای خودروهای سبک و سنگین"
+          application: "مناسب برای خودروهای سبک و سنگین",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "IRR",
+            price: "1100000",
+            availability: "https://schema.org/InStock",
+            url: "https://rojcode.github.io/Darman/products/brake-oil"
+          }
         }
       },
       {
@@ -125,7 +182,14 @@ const structuredData = {
           name: "گریس صنعتی",
           description: "گریس مخصوص روانکاری یاتاقان‌ها و قطعات متحرک با تحمل فشار و دمای بالا.",
           category: "گریس",
-          application: "مناسب برای ماشین‌آلات صنعتی و تجهیزات سنگین"
+          application: "مناسب برای ماشین‌آلات صنعتی و تجهیزات سنگین",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "IRR",
+            price: "900000",
+            availability: "https://schema.org/InStock",
+            url: "https://rojcode.github.io/Darman/products/industrial-grease"
+          }
         }
       },
       {
@@ -135,7 +199,14 @@ const structuredData = {
           name: "آب صابون صنعتی",
           description: "محلول ماشین‌کاری با خاصیت خنک‌کننده و روان‌کننده.",
           category: "آب صابون",
-          application: "مناسب برای ماشین‌کاری و صنایع فلزی"
+          application: "مناسب برای ماشین‌کاری و صنایع فلزی",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "IRR",
+            price: "700000",
+            availability: "https://schema.org/InStock",
+            url: "https://rojcode.github.io/Darman/products/industrial-soap-water"
+          }
         }
       },
       {
@@ -145,7 +216,14 @@ const structuredData = {
           name: "ضد یخ",
           description: "محصول پایه آب برای جلوگیری از یخ‌زدگی سیستم خنک‌کننده خودروها.",
           category: "محصولات پایه آب",
-          application: "مناسب برای سیستم خنک‌کننده موتور در زمستان"
+          application: "مناسب برای سیستم خنک‌کننده موتور در زمستان",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "IRR",
+            price: "600000",
+            availability: "https://schema.org/InStock",
+            url: "https://rojcode.github.io/Darman/products/antifreeze"
+          }
         }
       },
       {
@@ -155,7 +233,14 @@ const structuredData = {
           name: "آب رادیاتور",
           description: "آب پایه برای سیستم خنک‌کننده موتورهای خودرو و صنعتی.",
           category: "محصولات پایه آب",
-          application: "مناسب برای سیستم‌های خنک‌کننده موتور"
+          application: "مناسب برای سیستم‌های خنک‌کننده موتور",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "IRR",
+            price: "500000",
+            availability: "https://schema.org/InStock",
+            url: "https://rojcode.github.io/Darman/products/radiator-water"
+          }
         }
       },
       {
@@ -165,7 +250,14 @@ const structuredData = {
           name: "آب باتری",
           description: "برای شارژ و نگهداری باتری‌های اسیدی خودرو و صنعتی.",
           category: "محصولات پایه آب",
-          application: "مناسب برای شارژ و نگهداری باتری‌های اسیدی"
+          application: "مناسب برای شارژ و نگهداری باتری‌های اسیدی",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "IRR",
+            price: "450000",
+            availability: "https://schema.org/InStock",
+            url: "https://rojcode.github.io/Darman/products/battery-water"
+          }
         }
       }
     ]
