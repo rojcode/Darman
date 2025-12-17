@@ -1,9 +1,21 @@
 // Current language
 let currentLang = "persian";
 
+// Typewriter timeout for managing concurrent effects
+let typewriterTimeout;
+
 // Function to load language
 function loadLanguage(lang) {
   currentLang = lang;
+
+  // Clear any ongoing typewriter effect
+  if (typewriterTimeout) {
+    clearTimeout(typewriterTimeout);
+    typewriterTimeout = null;
+  }
+  const typewriterElement = document.getElementById("typewriter");
+  typewriterElement.innerHTML = "";
+
   fetch(`translate/${lang}.yml`)
     .then((response) => response.text())
     .then((yamlText) => {
@@ -33,11 +45,19 @@ function loadLanguage(lang) {
       const typewriterText = typewriterElement.textContent;
       typewriterElement.innerHTML = ""; // Clear existing content
       let index = 0;
+
+      // Clear any existing typewriter timeout
+      if (typewriterTimeout) {
+        clearTimeout(typewriterTimeout);
+      }
+
       function typeWriter() {
         if (index < typewriterText.length) {
           typewriterElement.innerHTML += typewriterText.charAt(index);
           index++;
-          setTimeout(typeWriter, 100);
+          typewriterTimeout = setTimeout(typeWriter, 100);
+        } else {
+          typewriterTimeout = null; // Clear when finished
         }
       }
       typeWriter();
