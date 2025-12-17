@@ -46,8 +46,8 @@ document.querySelectorAll(".product-card").forEach((card) => {
 });
 
 // Typewriter Effect for Hero Title
-const typewriterText = "دارمان روانکار پارس | تولیدکننده تخصصی انواع روانکار";
 const typewriterElement = document.getElementById("typewriter");
+const typewriterText = typewriterElement.dataset.text;
 let index = 0;
 
 function typeWriter() {
