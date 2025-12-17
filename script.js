@@ -1,4 +1,4 @@
-// Smooth Scroll for anchor links
+// Smooth Scrolling for Internal Links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -12,10 +12,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Set current year in footer
+// Dynamically Set Current Year in Footer Copyright
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Simple fade-in effect on scroll
+// Intersection Observer for Fade-in Animations on Scroll
 const observerOptions = {
   threshold: 0.1,
 };
@@ -28,17 +28,14 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
+// Observe All Sections for Fade-in Effect
 document.querySelectorAll("section").forEach((section) => {
   observer.observe(section);
 });
 
-// Add fade-in class to CSS if needed, but for simplicity, use opacity
-// In CSS, add: .fade-in { opacity: 1; transition: opacity 0.5s; }
-// Initially set sections to opacity: 0;
+// Note: Fade-in styles are defined in CSS with initial opacity 0 and transition.
 
-// But since CSS is separate, assume it's added.
-
-// For hover effect on product cards
+// Enhanced Hover Effects for Product Cards (Additional to CSS)
 document.querySelectorAll(".product-card").forEach((card) => {
   card.addEventListener("mouseenter", () => {
     card.style.transform = "scale(1.05)";
@@ -48,7 +45,7 @@ document.querySelectorAll(".product-card").forEach((card) => {
   });
 });
 
-// Typewriter effect
+// Typewriter Effect for Hero Title
 const typewriterText = "دارمان روانکار پارس | تولیدکننده تخصصی انواع روانکار";
 const typewriterElement = document.getElementById("typewriter");
 let index = 0;
@@ -61,4 +58,5 @@ function typeWriter() {
   }
 }
 
+// Initialize Typewriter Effect
 typeWriter();
