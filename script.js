@@ -47,3 +47,18 @@ document.querySelectorAll(".product-card").forEach((card) => {
     card.style.transform = "scale(1)";
   });
 });
+
+// Typewriter effect
+const typewriterText = "دارمان روانکار پارس | تولیدکننده تخصصی انواع روانکار";
+const typewriterElement = document.getElementById("typewriter");
+let index = 0;
+
+function typeWriter() {
+  if (index < typewriterText.length) {
+    typewriterElement.innerHTML += typewriterText.charAt(index);
+    index++;
+    setTimeout(typeWriter, 100);
+  }
+}
+
+typeWriter();

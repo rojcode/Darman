@@ -104,6 +104,17 @@ section p {
     background-color: #fff;
 }
 
+/* Location */
+.location {
+    background-color: #f8f9fa;
+}
+
+.location iframe {
+    margin-top: 20px;
+    border-radius: 8px;
+    max-width: 100%;
+}
+
 /* Products */
 .products {
     background-color: #f8f9fa;
