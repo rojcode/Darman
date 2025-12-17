@@ -1,0 +1,116 @@
+title: "Darman Ravankar Pars - Specialized Lubricant Manufacturer"
+description: "Specialized manufacturer of industrial and automotive lubricants in Kermanshah, Iran"
+header:
+  logo_alt: "Darman Ravankar Pars Logo"
+hero:
+  typewriter: "Darman Ravankar Pars | Specialized Lubricant Manufacturer"
+  subtitle: "Production of industrial and automotive oils with modern standards"
+  buttons:
+    - "Get Consultation"
+    - "Contact Us"
+about:
+  title: "Factory Introduction"
+  content: "Darman Ravankar Pars factory is one of the leading manufacturers of various oils, greases and water-based products in Iran. We focus on sustainable quality and meeting the needs of industries and the country's vehicles, producing our products using modern technologies and high-quality raw materials."
+  features:
+    - "Domestic production with emphasis on self-sufficiency"
+    - "Sustainable quality according to international standards"
+    - "Meeting the needs of heavy industries and personal vehicles"
+    - "Located in Kermanshah, Iran's industrial heart"
+location:
+  title: "Factory Location"
+  content: "Darman Ravankar Pars factory is located in Kermanshah, Iran."
+products:
+  title: "Our Products"
+  categories:
+    industrial_oils:
+      title: "Industrial Oils"
+      items:
+        hydraulic_oil:
+          title: "Hydraulic Oil"
+          description: "Suitable for hydraulic systems in industrial machinery, with high resistance to pressure and temperature."
+        heat_transfer_oil:
+          title: "Heat Transfer Oil"
+          description: "Designed for cooling and heat transfer systems in heavy industries."
+        trans_oil:
+          title: "Transmission Oil"
+          description: "For industrial gearboxes and power transmission in agricultural and construction machinery."
+        turbine_oil:
+          title: "Turbine Oil"
+          description: "Suitable for gas and steam turbines in power plants and energy industries."
+    automotive_oils:
+      title: "Automotive Oils"
+      items:
+        engine_oil:
+          title: "Engine Oil"
+          description: "For gasoline and diesel engines, with advanced formulation to reduce fuel consumption."
+        gearbox_oil:
+          title: "Gearbox Oil"
+          description: "Suitable for manual and automatic gearboxes of light and heavy vehicles."
+        hydraulic_oil:
+          title: "Hydraulic Oil"
+          description: "For brake and hydraulic steering systems in vehicles."
+        brake_oil:
+          title: "Brake Oil"
+          description: "With high boiling point for brake safety in harsh conditions."
+    grease:
+      title: "Grease"
+      items:
+        industrial_grease:
+          title: "Industrial Grease"
+          description: "For lubricating bearings and moving parts, with high pressure and temperature resistance."
+    cutting_fluid:
+      title: "Cutting Fluid"
+      items:
+        industrial_cutting_fluid:
+          title: "Industrial Cutting Fluid"
+          description: "Suitable for machining and metal industries, with cooling and lubricating properties."
+    water_based:
+      title: "Water-Based Products"
+      items:
+        antifreeze:
+          title: "Antifreeze"
+          description: "For vehicle cooling systems in winter."
+        radiator_water:
+          title: "Radiator Water"
+          description: "For cooling systems of vehicles and industrial engines."
+        battery_water:
+          title: "Battery Water"
+          description: "For charging and maintaining acid batteries."
+advantages:
+  title: "Why Darman Ravankar Pars?"
+  list:
+    - "Production according to Iran's market needs and domestic standards"
+    - "Sustainable quality with advanced quality control"
+    - "Competitive and suitable price for bulk purchases"
+    - "Specialized technical support for customers"
+    - "Possibility of agency cooperation throughout the country"
+brand_intro:
+  content: "Darman Ravankar Pars is a leading Iranian company in the production of industrial and automotive lubricants. This company produces engine oil, gearbox oil, hydraulic oil, brake oil, industrial grease and water-based products, serving the domestic vehicle markets and industries. Quality, trust and innovation are the key principles of this brand."
+faq:
+  title: "Frequently Asked Questions"
+  questions:
+    - question: "What products does Darman Ravankar Pars produce?"
+      answer: "This company produces industrial and automotive lubricants including engine oil, gearbox oil, hydraulic oil, brake oil, turbine oil, transmission oil, industrial grease and water-based products such as antifreeze and radiator water."
+    - question: "What applications are Darman Ravankar Pars products suitable for?"
+      answer: "Darman Ravankar Pars oils and greases are designed for industrial machinery, light and heavy vehicles, hydraulic systems, gearboxes, turbines and cooling systems."
+    - question: "Where is Darman Ravankar Pars factory located?"
+      answer: "This factory is located in Kermanshah province, Iran and supplies its products to various industries and domestic markets."
+    - question: "Why should we choose Darman Ravankar Pars?"
+      answer: "Darman Ravankar Pars offers sustainable quality, advanced quality control, competitive prices and specialized technical support, making it a reliable option for customers and agencies."
+mission:
+  title: "Mission and Vision"
+  mission: "Our mission is to produce high-quality and sustainable lubricants that ensure optimal performance, safety and longevity of industrial equipment and vehicles. Darman Ravankar Pars always moves towards providing reliable and effective products by focusing on innovation, international standards and real customer needs."
+  vision: "Darman Ravankar Pars vision is to become the main reference for the production of industrial and automotive lubricants in Iran and to upgrade the quality standards of the lubricant industry. We seek to create sustainable trust in customers, optimize operational costs and improve the performance of machinery and vehicles so that every product of ours represents the commitment, expertise and innovation of the Darman brand."
+about_llm:
+  title: "Identity and Introduction of Darman Ravankar Pars"
+  content1: "Darman Ravankar Pars, the beating heart of industrial and automotive lubricant production in Kermanshah. This company produces high-performance and long-lasting products by combining advanced technical knowledge and high-quality raw materials. Darman Ravankar Pars always strives to meet the needs of Iranian industries and vehicles with reliable, safe and efficient products."
+  content2: "Our product range includes engine oil, gearbox oil, hydraulic oil, brake oil, turbine oil, transmission oil, industrial grease and water-based products such as antifreeze and radiator water. With a team of specialized technical experts and advanced quality control systems, every product of Darman Ravankar Pars represents our commitment to quality, innovation and customer trust. We believe that every drop of lubricant guarantees the flawless performance of machinery and vehicles."
+cta:
+  title: "Contact us for cooperation or bulk purchase"
+  button: "Contact Us"
+footer:
+  company: "Darman Ravankar Pars"
+  location: "Location: Kermanshah, Iran"
+  phone_label: "Phone:"
+  phone_number: "0921 972 6349"
+  copyright: "Darman Ravankar Pars. All rights reserved."

@@ -1,42 +1,78 @@
-// Load translations
-fetch("translate/persian.yml")
-  .then((response) => response.text())
-  .then((yamlText) => {
-    const data = jsyaml.load(yamlText);
-    function getValue(key) {
-      const keys = key.split(".");
-      let value = data;
-      for (const k of keys) {
-        value = value[k];
+// Current language
+let currentLang = "persian";
+
+// Function to load language
+function loadLanguage(lang) {
+  currentLang = lang;
+  fetch(`translate/${lang}.yml`)
+    .then((response) => response.text())
+    .then((yamlText) => {
+      const data = jsyaml.load(yamlText);
+      function getValue(key) {
+        const keys = key.split(".");
+        let value = data;
+        for (const k of keys) {
+          value = value[k];
+        }
+        return value;
       }
-      return value;
-    }
-    document.querySelectorAll("[data-i18n]").forEach((el) => {
-      const key = el.getAttribute("data-i18n");
-      const value = getValue(key);
-      if (el.tagName === "META") {
-        el.setAttribute("content", value);
-      } else if (el.tagName === "IMG") {
-        el.setAttribute("alt", value);
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        const value = getValue(key);
+        if (el.tagName === "META") {
+          el.setAttribute("content", value);
+        } else if (el.tagName === "IMG") {
+          el.setAttribute("alt", value);
+        } else {
+          el.textContent = value;
+        }
+      });
+
+      // Typewriter Effect for Hero Title
+      const typewriterElement = document.getElementById("typewriter");
+      const typewriterText = typewriterElement.textContent;
+      typewriterElement.innerHTML = ""; // Clear existing content
+      let index = 0;
+      function typeWriter() {
+        if (index < typewriterText.length) {
+          typewriterElement.innerHTML += typewriterText.charAt(index);
+          index++;
+          setTimeout(typeWriter, 100);
+        }
+      }
+      typeWriter();
+
+      // Update HTML attributes
+      if (lang === "english") {
+        document.documentElement.lang = "en";
+        document.body.style.direction = "ltr";
+      } else if (lang === "arabic") {
+        document.documentElement.lang = "ar";
+        document.body.style.direction = "rtl";
       } else {
-        el.textContent = value;
+        document.documentElement.lang = "fa";
+        document.body.style.direction = "rtl";
       }
     });
+}
 
-    // Typewriter Effect for Hero Title
-    const typewriterElement = document.getElementById("typewriter");
-    const typewriterText = typewriterElement.textContent;
-    typewriterElement.innerHTML = ""; // Clear existing content
-    let index = 0;
-    function typeWriter() {
-      if (index < typewriterText.length) {
-        typewriterElement.innerHTML += typewriterText.charAt(index);
-        index++;
-        setTimeout(typeWriter, 100);
-      }
-    }
-    typeWriter();
+// Load initial language
+loadLanguage(currentLang);
+
+// Language switcher
+document.querySelectorAll(".dropdown-content a").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const lang = link.getAttribute("data-lang");
+    loadLanguage(lang);
+    // Update button
+    const flagImg = link.querySelector("img");
+    const langText = link.textContent.trim().split(" ")[0];
+    document.querySelector(
+      ".dropbtn"
+    ).innerHTML = `<img src="${flagImg.src}" alt="" class="flag-icon"> ${langText} <i class="arrow-down"></i>`;
   });
+});
 
 // Smooth Scrolling for Internal Links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
