@@ -1,0 +1,116 @@
+title: "Darman Ravankar Pars - Uzman Yağ Üreticisi"
+description: "Kermanshah, İran'da endüstriyel ve otomotiv yağların uzman üreticisi"
+header:
+  logo_alt: "Darman Ravankar Pars Logosu"
+hero:
+  typewriter: "Darman Ravankar Pars | Çeşitli Yağların Uzman Üreticisi"
+  subtitle: "Modern standartlara uygun endüstriyel ve otomotiv yağ üretimi"
+  buttons:
+    - "Danışmanlık Alın"
+    - "Bizimle İletişime Geçin"
+about:
+  title: "Fabrika Tanıtımı"
+  content: "Darman Ravankar Pars Fabrikası, İran'da çeşitli yağ, gres ve su bazlı ürünlerin önde gelen üreticilerinden biri olarak faaliyet göstermektedir. Kaliteli ve sürdürülebilir ürünlere odaklanarak, ülkenin endüstrileri ve araçlarının ihtiyaçlarını karşılamak için modern teknolojiler ve kaliteli hammaddeler kullanarak ürünlerimizi üretiyoruz."
+  features:
+    - "Kendi kendine yeterlilik vurgusuyla yerli üretim"
+    - "Uluslararası standartlara uygun sürdürülebilir kalite"
+    - "Ağır endüstriler ve kişisel araçların ihtiyaçlarını karşılama"
+    - "İran'ın endüstriyel kalbi Kermanshah'ta yerleşik"
+location:
+  title: "Fabrika Konumu"
+  content: "Darman Ravankar Pars Fabrikası, Kermanshah, İran'da bulunmaktadır."
+products:
+  title: "Ürünlerimiz"
+  categories:
+    industrial_oils:
+      title: "Endüstriyel Yağlar"
+      items:
+        hydraulic_oil:
+          title: "Hidrolik Yağ"
+          description: "Endüstriyel makinelerde hidrolik sistemler için uygun, yüksek basınç ve sıcaklık direnci."
+        heat_transfer_oil:
+          title: "Isı Transfer Yağı"
+          description: "Ağır endüstrilerde soğutma ve ısı transfer sistemleri için tasarlandı."
+        trans_oil:
+          title: "Trans Yağı"
+          description: "Tarım ve inşaat makinelerinde endüstriyel şanzımanlar ve güç aktarımı için."
+        turbine_oil:
+          title: "Türbin Yağı"
+          description: "Güç santrallerinde ve enerji endüstrilerinde gaz ve buhar türbinleri için uygun."
+    automotive_oils:
+      title: "Otomotiv Yağları"
+      items:
+        engine_oil:
+          title: "Motor Yağı"
+          description: "Benzinli ve dizel motorlar için, yakıt tüketimini azaltmak için gelişmiş formülasyon."
+        gearbox_oil:
+          title: "Şanzıman Yağı"
+          description: "Hafif ve ağır araçların manuel ve otomatik şanzımanları için uygun."
+        hydraulic_oil:
+          title: "Hidrolik Yağ"
+          description: "Araçlarda fren ve hidrolik direksiyon sistemleri için."
+        brake_oil:
+          title: "Fren Yağı"
+          description: "Zorlu koşullarda fren güvenliği için yüksek kaynama noktası."
+    grease:
+      title: "Gres"
+      items:
+        industrial_grease:
+          title: "Endüstriyel Gres"
+          description: "Yataklar ve hareketli parçalar için yağlama, yüksek basınç ve sıcaklık toleransı."
+    cutting_fluid:
+      title: "Kesme Sıvısı"
+      items:
+        industrial_cutting_fluid:
+          title: "Endüstriyel Kesme Sıvısı"
+          description: "Metal işleme ve endüstriler için soğutma ve yağlama özelliği."
+    water_based:
+      title: "Su Bazlı Ürünler"
+      items:
+        antifreeze:
+          title: "Antifriz"
+          description: "Kış mevsiminde araçların soğutma sistemleri için."
+        radiator_water:
+          title: "Radyatör Suyu"
+          description: "Araç ve endüstriyel motorların soğutma sistemleri için."
+        battery_water:
+          title: "Akü Suyu"
+          description: "Asitli akülerin şarjı ve bakımı için."
+advantages:
+  title: "Neden Darman Ravankar Pars?"
+  list:
+    - "İran pazarının ihtiyaçlarına ve iç standartlara uygun üretim"
+    - "Gelişmiş kalite kontrolü ile sürdürülebilir kalite"
+    - "Toplu satın alma için rekabetçi fiyat"
+    - "Müşteriler için uzman teknik destek"
+    - "Ülke genelinde temsilcilik işbirliği imkanı"
+brand_intro:
+  content: "Darman Ravankar Pars, İran'da endüstriyel ve otomotiv yağlayıcıların önde gelen üreticisidir. Motor yağı, şanzıman yağı, hidrolik yağ, fren yağı, endüstriyel gres ve su bazlı ürünler üreterek endüstrilere ve iç araç pazarına hizmet eder. Kalite, güven ve yenilik bu markanın temel prensipleridir."
+faq:
+  title: "Sık Sorulan Sorular"
+  questions:
+    - question: "Darman Ravankar Pars hangi ürünleri üretir?"
+      answer: "Bu şirket, motor yağı, şanzıman yağı, hidrolik yağ, fren yağı, türbin yağı, trans yağı, endüstriyel gres ve antifriz ve radyatör suyu gibi su bazlı ürünleri içeren endüstriyel ve otomotiv yağlayıcıları üretir."
+    - question: "Darman Ravankar Pars ürünleri hangi uygulamalar için uygundur?"
+      answer: "Darman Ravankar Pars'ın yağları ve gresleri, endüstriyel makineler, hafif ve ağır araçlar, hidrolik sistemler, şanzımanlar, türbinler ve soğutma sistemleri için tasarlanmıştır."
+    - question: "Darman Ravankar Pars fabrikası nerede?"
+      answer: "Bu fabrika, Kermanshah eyaleti, İran'da bulunmaktadır ve ürünlerini çeşitli endüstrilere ve iç pazara tedarik eder."
+    - question: "Neden Darman Ravankar Pars'ı seçmeliyiz?"
+      answer: "Darman Ravankar Pars, sürdürülebilir kalite, gelişmiş kalite kontrolü, rekabetçi fiyat ve uzman teknik destek ile müşteriler ve temsilciler için güvenilir bir seçenektir."
+mission:
+  title: "Misyon ve Vizyon"
+  mission: "Misyonumuz, endüstriyel ekipmanların ve araçların optimum performansı, güvenliği ve ömrünü garanti eden kaliteli ve sürdürülebilir yağlayıcılar üretmektir. Darman Ravankar Pars, yenilik, uluslararası standartlar ve müşterilerin gerçek ihtiyaçlarına odaklanarak, güvenilir ve etkili ürünler sunma yolunda ilerlemektedir."
+  vision: "Darman Ravankar Pars'ın vizyonu, İran'da endüstriyel ve otomotiv yağlayıcıların ana üretim merkezi olmak ve yağlayıcı endüstrisinin kalite standartlarını yükseltmektir. Müşterilerde sürdürülebilir güven oluşturmak, operasyonel maliyetleri optimize etmek ve makinelerin ve araçların performansını artırmak için çalışıyoruz, böylece her ürünümüz Darman markasının taahhüt, uzmanlık ve yenilik temsilcisi olsun."
+about_llm:
+  title: "Darman Ravankar Pars'ın Kimliği ve Tanıtımı"
+  content1: "Darman Ravankar Pars, Kermanshah'ta endüstriyel ve otomotiv yağlayıcıların üretim kalbidir. Gelişmiş teknik bilgi ve kaliteli hammaddelerin birleşimiyle, yüksek performans ve uzun ömür garantisi veren ürünler üretir. Darman Ravankar Pars, İran endüstrilerinin ve araçlarının ihtiyaçlarını güvenilir, güvenli ve etkili ürünlerle karşılamaya çalışır."
+  content2: "Ürün yelpazemiz motor yağı, şanzıman yağı, hidrolik yağ, fren yağı, türbin yağı, trans yağı, endüstriyel gres ve antifriz ve radyatör suyu gibi su bazlı ürünleri içerir. Uzman teknik ekip ve gelişmiş kalite kontrol sistemleriyle, her Darman Ravankar Pars ürünü kalite, yenilik ve müşteri güvenine olan taahhüdümüzün temsilcisidir. Her yağ damlasının makinelerin ve araçların kusursuz performansını garanti ettiğine inanıyoruz."
+cta:
+  title: "İşbirliği veya toplu satın alma için bizimle iletişime geçin"
+  button: "Bizimle İletişime Geçin"
+footer:
+  company: "Darman Ravankar Pars"
+  location: "Konum: Kermanshah, İran"
+  phone_label: "Telefon Numarası:"
+  phone_number: "0921 972 6349"
+  copyright: "Darman Ravankar Pars. Tüm hakları saklıdır."

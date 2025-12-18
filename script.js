@@ -70,6 +70,12 @@ function loadLanguage(lang) {
       } else if (lang === "arabic") {
         document.documentElement.lang = "ar";
         document.body.style.direction = "rtl";
+      } else if (lang === "turkish") {
+        document.documentElement.lang = "tr";
+        document.body.style.direction = "ltr";
+      } else if (lang === "russian") {
+        document.documentElement.lang = "ru";
+        document.body.style.direction = "ltr";
       } else {
         document.documentElement.lang = "fa";
         document.body.style.direction = "rtl";
