@@ -167,3 +167,21 @@ document.querySelectorAll(".product-card").forEach((card) => {
     card.style.transform = "scale(1)";
   });
 });
+
+// Scroll to Top Button Functionality
+const scrollToTopBtn = document.getElementById("scroll-to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > window.innerHeight / 2) {
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
