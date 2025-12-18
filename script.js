@@ -1,5 +1,5 @@
 // Current language
-let currentLang = "persian";
+let currentLang = localStorage.getItem("selectedLanguage") || "persian";
 
 // Typewriter timeout for managing concurrent effects
 let typewriterTimeout;
@@ -7,6 +7,7 @@ let typewriterTimeout;
 // Function to load language
 function loadLanguage(lang) {
   currentLang = lang;
+  localStorage.setItem("selectedLanguage", lang);
 
   // Clear any ongoing typewriter effect
   if (typewriterTimeout) {
@@ -81,6 +82,18 @@ function loadLanguage(lang) {
       newScript.src = `LLMO/${lang}-data.js`;
       newScript.id = "structured-data-script";
       document.head.appendChild(newScript);
+
+      // Update dropdown button
+      const link = document.querySelector(
+        `.dropdown-content a[data-lang="${lang}"]`
+      );
+      if (link) {
+        const flagImg = link.querySelector("img");
+        const langText = link.textContent.trim().split(" ")[0];
+        document.querySelector(
+          ".dropbtn"
+        ).innerHTML = `<img src="${flagImg.src}" alt="" class="flag-icon"> ${langText} <i class="arrow-down"></i>`;
+      }
     });
 }
 
