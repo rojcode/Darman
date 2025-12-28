@@ -75,12 +75,31 @@
 
     <!-- Hero Section with Typewriter Title and CTA Buttons -->
     <section class="hero">
+        <!-- Animated Waves Background -->
+        <div class="hero-waves-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto" style="width: 100%;">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 s 58-18 88-18 58 18 88 18 s 58-18 88-18 58 18 88 18 v44h-704z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="0" y="0" fill="rgba(255,255,255,0.07)" />
+                    <use xlink:href="#gentle-wave" x="0" y="3" fill="rgba(255,255,255,0.05)" />
+                    <use xlink:href="#gentle-wave" x="0" y="5" fill="rgba(255,255,255,0.03)" />
+                    <use xlink:href="#gentle-wave" x="0" y="7" fill="rgba(255,255,255,0.02)" />
+                </g>
+            </svg>
+        </div>
+
         <div class="container">
-            <h1 id="typewriter" data-i18n="hero.typewriter"></h1>
-            <p data-i18n="hero.subtitle"></p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn" data-i18n="hero.buttons.0"></a>
-                <a href="#contact" class="btn" data-i18n="hero.buttons.1"></a>
+            <div class="hero-content">
+                <h1 id="typewriter" data-i18n="hero.typewriter"></h1>
+                <p data-i18n="hero.subtitle"></p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-hero-primary" data-i18n="hero.buttons.0"></a>
+                    <a href="#contact" class="btn btn-hero-secondary" data-i18n="hero.buttons.1"></a>
+                </div>
             </div>
         </div>
     </section>
