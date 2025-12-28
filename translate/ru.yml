@@ -19,6 +19,7 @@ about:
 location:
   title: "Расположение Завода"
   content: "Завод Darman Ravankar Pars расположен в Керманшахе, Иран."
+  interact_btn: "Нажмите, чтобы взаимодействовать с картой"
 products:
   title: "Наши Продукты"
   categories:

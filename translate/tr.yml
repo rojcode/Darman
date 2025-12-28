@@ -19,6 +19,7 @@ about:
 location:
   title: "Fabrika Konumu"
   content: "Darman Ravankar Pars Fabrikası, Kermanshah, İran'da bulunmaktadır."
+  interact_btn: "Harita ile etkileşim kurmak için tıklayın"
 products:
   title: "Ürünlerimiz"
   categories:
