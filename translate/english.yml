@@ -19,6 +19,7 @@ about:
 location:
   title: "Factory Location"
   content: "Darman Ravankar Pars factory is located in Kermanshah, Iran."
+  interact_btn: "Click to interact with map"
 products:
   title: "Our Products"
   categories:
@@ -114,3 +115,5 @@ footer:
   phone_label: "Phone:"
   phone_number: "0921 972 6349"
   copyright: "Darman Ravankar Pars. All rights reserved."
+  quick_links_title: "Quick Links"
+  contact_title: "Contact Us"

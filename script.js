@@ -15,16 +15,20 @@ function loadLanguage(lang) {
     typewriterTimeout = null;
   }
   const typewriterElement = document.getElementById("typewriter");
-  typewriterElement.innerHTML = "";
+  if (typewriterElement) typewriterElement.innerHTML = "";
 
   fetch(`translate/${lang}.yml`)
-    .then((response) => response.text())
+    .then((response) => {
+      if (!response.ok) throw new Error(`Failed to load ${lang} translation`);
+      return response.text();
+    })
     .then((yamlText) => {
       const data = jsyaml.load(yamlText);
       function getValue(key) {
         const keys = key.split(".");
         let value = data;
         for (const k of keys) {
+          if (value[k] === undefined) return key; // Fallback to key if not found
           value = value[k];
         }
         return value;
@@ -43,43 +47,32 @@ function loadLanguage(lang) {
 
       // Typewriter Effect for Hero Title
       const typewriterElement = document.getElementById("typewriter");
-      const typewriterText = typewriterElement.textContent;
-      typewriterElement.innerHTML = ""; // Clear existing content
-      let index = 0;
+      if (typewriterElement) {
+        const typewriterText = typewriterElement.textContent;
+        typewriterElement.innerHTML = ""; // Clear existing content
+        let index = 0;
 
-      // Clear any existing typewriter timeout
-      if (typewriterTimeout) {
-        clearTimeout(typewriterTimeout);
-      }
-
-      function typeWriter() {
-        if (index < typewriterText.length) {
-          typewriterElement.innerHTML += typewriterText.charAt(index);
-          index++;
-          typewriterTimeout = setTimeout(typeWriter, 100);
-        } else {
-          typewriterTimeout = null; // Clear when finished
+        function typeWriter() {
+          if (index < typewriterText.length) {
+            typewriterElement.innerHTML += typewriterText.charAt(index);
+            index++;
+            typewriterTimeout = setTimeout(typeWriter, 100);
+          } else {
+            typewriterTimeout = null; // Clear when finished
+          }
         }
+        typeWriter();
       }
-      typeWriter();
 
-      // Update HTML attributes
-      if (lang === "english") {
-        document.documentElement.lang = "en";
-        document.body.style.direction = "ltr";
-      } else if (lang === "arabic") {
-        document.documentElement.lang = "ar";
-        document.body.style.direction = "rtl";
-      } else if (lang === "turkish") {
-        document.documentElement.lang = "tr";
-        document.body.style.direction = "ltr";
-      } else if (lang === "russian") {
-        document.documentElement.lang = "ru";
-        document.body.style.direction = "ltr";
-      } else {
-        document.documentElement.lang = "fa";
-        document.body.style.direction = "rtl";
-      }
+      // Update HTML attributes and direction
+      const isRTL = lang === "persian" || lang === "arabic";
+      document.body.style.direction = isRTL ? "rtl" : "ltr";
+
+      if (lang === "english") document.documentElement.lang = "en";
+      else if (lang === "arabic") document.documentElement.lang = "ar";
+      else if (lang === "turkish") document.documentElement.lang = "tr";
+      else if (lang === "russian") document.documentElement.lang = "ru";
+      else document.documentElement.lang = "fa";
 
       // Update structured data script
       const existingScript = document.getElementById("structured-data-script");
@@ -95,16 +88,35 @@ function loadLanguage(lang) {
       );
       if (link) {
         const flagImg = link.querySelector("img");
-        const langText = link.textContent.trim().split(" ")[0];
+        const langText = link.textContent.trim();
         document.querySelector(
           ".dropbtn"
         ).innerHTML = `<img src="${flagImg.src}" alt="" class="flag-icon"> ${langText} <i class="arrow-down"></i>`;
       }
+    })
+    .catch((error) => {
+      console.error("Error loading language:", error);
     });
 }
 
 // Load initial language
 loadLanguage(currentLang);
+
+// Language dropdown toggle
+const dropbtn = document.querySelector(".dropbtn");
+const dropdownContent = document.querySelector(".dropdown-content");
+
+if (dropbtn && dropdownContent) {
+  dropbtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    dropdownContent.classList.toggle("show");
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", () => {
+    dropdownContent.classList.remove("show");
+  });
+}
 
 // Language switcher
 document.querySelectorAll(".dropdown-content a").forEach((link) => {
@@ -112,12 +124,7 @@ document.querySelectorAll(".dropdown-content a").forEach((link) => {
     e.preventDefault();
     const lang = link.getAttribute("data-lang");
     loadLanguage(lang);
-    // Update button
-    const flagImg = link.querySelector("img");
-    const langText = link.textContent.trim().split(" ")[0];
-    document.querySelector(
-      ".dropbtn"
-    ).innerHTML = `<img src="${flagImg.src}" alt="" class="flag-icon"> ${langText} <i class="arrow-down"></i>`;
+    dropdownContent.classList.remove("show");
   });
 });
 
@@ -183,5 +190,72 @@ scrollToTopBtn.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
+  });
+});
+
+// Tab Switching Logic for Products
+document.querySelectorAll(".tab-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const tabId = btn.getAttribute("data-tab");
+
+    // Update buttons
+    document
+      .querySelectorAll(".tab-btn")
+      .forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    // Update content
+    document.querySelectorAll(".tab-content").forEach((content) => {
+      content.classList.remove("active");
+    });
+    document.getElementById(tabId).classList.add("active");
+  });
+});
+
+// Map Interaction Logic
+const mapOverlay = document.getElementById("map-overlay");
+const mapWrapper = document.querySelector(".map-wrapper");
+
+if (mapOverlay && mapWrapper) {
+  mapOverlay.addEventListener("click", () => {
+    mapOverlay.classList.add("hidden");
+    mapWrapper.classList.add("active");
+  });
+}
+
+// Hamburger Menu Toggle
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const mainNav = document.getElementById("main-nav");
+
+if (hamburgerBtn && mainNav) {
+  hamburgerBtn.addEventListener("click", () => {
+    hamburgerBtn.classList.toggle("active");
+    mainNav.classList.toggle("active");
+  });
+
+  // Close menu when a link is clicked
+  mainNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      hamburgerBtn.classList.remove("active");
+      mainNav.classList.remove("active");
+    });
+  });
+}
+
+// FAQ Accordion Logic
+document.querySelectorAll(".faq-question").forEach((question) => {
+  question.addEventListener("click", () => {
+    const item = question.parentElement;
+    const isActive = item.classList.contains("active");
+
+    // Close all other items
+    document.querySelectorAll(".faq-item").forEach((i) => {
+      i.classList.remove("active");
+    });
+
+    // Toggle current item
+    if (!isActive) {
+      item.classList.add("active");
+    }
   });
 });

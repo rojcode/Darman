@@ -19,6 +19,7 @@ about:
 location:
   title: "موقعیت کارخانه"
   content: "کارخانه دارمان روانکار پارس در کرمانشاه، ایران واقع شده است."
+  interact_btn: "برای تعامل با نقشه کلیک کنید"
 products:
   title: "محصولات ما"
   categories:
@@ -114,3 +115,5 @@ footer:
   phone_label: "شماره تماس:"
   phone_number: "0921 972 6349"
   copyright: "دارمان روانکار پارس. تمامی حقوق محفوظ است."
+  quick_links_title: "دسترسی سریع"
+  contact_title: "ارتباط با ما"

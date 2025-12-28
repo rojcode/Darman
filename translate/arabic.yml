@@ -19,6 +19,7 @@ about:
 location:
   title: "موقع المصنع"
   content: "مصنع دارمان روانکار پارس يقع في كرمانشاه، إيران."
+  interact_btn: "انقر للتفاعل مع الخريطة"
 products:
   title: "منتجاتنا"
   categories:
@@ -114,3 +115,5 @@ footer:
   phone_label: "الهاتف:"
   phone_number: "0921 972 6349"
   copyright: "دارمان روانکار پارس. جميع الحقوق محفوظة."
+  quick_links_title: "روابط سريعة"
+  contact_title: "اتصل بنا"

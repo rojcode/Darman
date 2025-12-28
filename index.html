@@ -24,33 +24,50 @@
 </head>
 
 <body>
-    <!-- Header Section with Logo -->
+    <!-- Header Section with Logo and Navigation -->
     <header>
-        <div class="container">
-            <img src="static/images/darman_image_main.png" data-i18n="header.logo_alt" alt="" class="logo">
-            <div class="language-dropdown">
-                <button class="dropbtn">
-                    <img src="static/images/flags/Iran.svg.png" alt="Persian Flag" class="flag-icon"> فارسی
-                    <i class="arrow-down"></i>
+        <div class="container header-container">
+            <div class="header-left">
+                <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
                 </button>
-                <div class="dropdown-content">
-                    <a href="#" data-lang="persian">
+                <img src="static/images/darman_image_main.png" data-i18n="header.logo_alt" alt="" class="logo">
+                <nav class="main-nav" id="main-nav">
+                    <a href="#about" data-i18n="about.title"></a>
+                    <a href="#products" data-i18n="products.title"></a>
+                    <a href="#location" data-i18n="location.title"></a>
+                    <a href="#contact" data-i18n="cta.button"></a>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="language-dropdown">
+                    <button class="dropbtn">
                         <img src="static/images/flags/Iran.svg.png" alt="Persian Flag" class="flag-icon"> فارسی
-                    </a>
-                    <a href="#" data-lang="english">
-                        <img src="static/images/flags/Flag-United-Kingdom.webp" alt="English Flag" class="flag-icon">
-                        English
-                    </a>
-                    <a href="#" data-lang="arabic">
-                        <img src="static/images/flags/ae.png" alt="Arabic Flag" class="flag-icon"> العربية
-                    </a>
-                    <a href="#" data-lang="turkish">
-                        <img src="static/images/flags/Flag_of_Turkey.png" alt="Turkish Flag" class="flag-icon"> Türkçe
-                    </a>
-                    <a href="#" data-lang="russian">
-                        <img src="static/images/flags/Flag_of_Russia.svg.webp" alt="Russian Flag" class="flag-icon">
-                        Русский
-                    </a>
+                        <i class="arrow-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" data-lang="persian">
+                            <img src="static/images/flags/Iran.svg.png" alt="Persian Flag" class="flag-icon"> فارسی
+                        </a>
+                        <a href="#" data-lang="english">
+                            <img src="static/images/flags/Flag-United-Kingdom.webp" alt="English Flag"
+                                class="flag-icon">
+                            English
+                        </a>
+                        <a href="#" data-lang="arabic">
+                            <img src="static/images/flags/ae.png" alt="Arabic Flag" class="flag-icon"> العربية
+                        </a>
+                        <a href="#" data-lang="turkish">
+                            <img src="static/images/flags/Flag_of_Turkey.png" alt="Turkish Flag" class="flag-icon">
+                            Türkçe
+                        </a>
+                        <a href="#" data-lang="russian">
+                            <img src="static/images/flags/Flag_of_Russia.svg.webp" alt="Russian Flag" class="flag-icon">
+                            Русский
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,10 +102,15 @@
         <div class="container">
             <h2 data-i18n="location.title"></h2>
             <p data-i18n="location.content"></p>
-            <!-- Embedded OpenStreetMap showing factory location -->
-            <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=47.25,34.3,47.28,34.35&layer=mapnik&marker=34.320576,47.267728"
-                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <!-- Map Container with Interaction Overlay -->
+            <div class="map-wrapper">
+                <div class="map-overlay" id="map-overlay">
+                    <button class="btn btn-primary" data-i18n="location.interact_btn"></button>
+                </div>
+                <iframe id="factory-map"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=47.25,34.3,47.28,34.35&layer=mapnik&marker=34.320576,47.267728"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
     </section>
 
@@ -97,89 +119,106 @@
         <div class="container">
             <h2 data-i18n="products.title"></h2>
 
+            <!-- Tabs Navigation -->
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="industrial"
+                    data-i18n="products.categories.industrial_oils.title"></button>
+                <button class="tab-btn" data-tab="automotive"
+                    data-i18n="products.categories.automotive_oils.title"></button>
+                <button class="tab-btn" data-tab="grease" data-i18n="products.categories.grease.title"></button>
+                <button class="tab-btn" data-tab="cutting" data-i18n="products.categories.cutting_fluid.title"></button>
+                <button class="tab-btn" data-tab="water" data-i18n="products.categories.water_based.title"></button>
+            </div>
+
             <!-- Industrial Oils Category -->
-            <div class="product-category">
-                <h3 data-i18n="products.categories.industrial_oils.title"></h3>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <h4 data-i18n="products.categories.industrial_oils.items.hydraulic_oil.title"></h4>
-                        <p data-i18n="products.categories.industrial_oils.items.hydraulic_oil.description"></p>
-                    </div>
-                    <div class="product-card">
-                        <h4 data-i18n="products.categories.industrial_oils.items.heat_transfer_oil.title"></h4>
-                        <p data-i18n="products.categories.industrial_oils.items.heat_transfer_oil.description"></p>
-                    </div>
-                    <div class="product-card">
-                        <h4 data-i18n="products.categories.industrial_oils.items.trans_oil.title"></h4>
-                        <p data-i18n="products.categories.industrial_oils.items.trans_oil.description"></p>
-                    </div>
-                    <div class="product-card">
-                        <h4 data-i18n="products.categories.industrial_oils.items.turbine_oil.title"></h4>
-                        <p data-i18n="products.categories.industrial_oils.items.turbine_oil.description"></p>
+            <div id="industrial" class="tab-content active">
+                <div class="product-category">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <h4 data-i18n="products.categories.industrial_oils.items.hydraulic_oil.title"></h4>
+                            <p data-i18n="products.categories.industrial_oils.items.hydraulic_oil.description"></p>
+                        </div>
+                        <div class="product-card">
+                            <h4 data-i18n="products.categories.industrial_oils.items.heat_transfer_oil.title"></h4>
+                            <p data-i18n="products.categories.industrial_oils.items.heat_transfer_oil.description"></p>
+                        </div>
+                        <div class="product-card">
+                            <h4 data-i18n="products.categories.industrial_oils.items.trans_oil.title"></h4>
+                            <p data-i18n="products.categories.industrial_oils.items.trans_oil.description"></p>
+                        </div>
+                        <div class="product-card">
+                            <h4 data-i18n="products.categories.industrial_oils.items.turbine_oil.title"></h4>
+                            <p data-i18n="products.categories.industrial_oils.items.turbine_oil.description"></p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Automotive Oils Category -->
-            <div class="product-category">
-                <h3 data-i18n="products.categories.automotive_oils.title"></h3>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <h4 data-i18n="products.categories.automotive_oils.items.engine_oil.title"></h4>
-                        <p data-i18n="products.categories.automotive_oils.items.engine_oil.description"></p>
-                    </div>
-                    <div class="product-card">
-                        <h4 data-i18n="products.categories.automotive_oils.items.gearbox_oil.title"></h4>
-                        <p data-i18n="products.categories.automotive_oils.items.gearbox_oil.description"></p>
-                    </div>
-                    <div class="product-card">
-                        <h4 data-i18n="products.categories.automotive_oils.items.hydraulic_oil.title"></h4>
-                        <p data-i18n="products.categories.automotive_oils.items.hydraulic_oil.description"></p>
-                    </div>
-                    <div class="product-card">
-                        <h4 data-i18n="products.categories.automotive_oils.items.brake_oil.title"></h4>
-                        <p data-i18n="products.categories.automotive_oils.items.brake_oil.description"></p>
+            <div id="automotive" class="tab-content">
+                <div class="product-category">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <h4 data-i18n="products.categories.automotive_oils.items.engine_oil.title"></h4>
+                            <p data-i18n="products.categories.automotive_oils.items.engine_oil.description"></p>
+                        </div>
+                        <div class="product-card">
+                            <h4 data-i18n="products.categories.automotive_oils.items.gearbox_oil.title"></h4>
+                            <p data-i18n="products.categories.automotive_oils.items.gearbox_oil.description"></p>
+                        </div>
+                        <div class="product-card">
+                            <h4 data-i18n="products.categories.automotive_oils.items.hydraulic_oil.title"></h4>
+                            <p data-i18n="products.categories.automotive_oils.items.hydraulic_oil.description"></p>
+                        </div>
+                        <div class="product-card">
+                            <h4 data-i18n="products.categories.automotive_oils.items.brake_oil.title"></h4>
+                            <p data-i18n="products.categories.automotive_oils.items.brake_oil.description"></p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Grease Category -->
-            <div class="product-category">
-                <h3 data-i18n="products.categories.grease.title"></h3>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <h4 data-i18n="products.categories.grease.items.industrial_grease.title"></h4>
-                        <p data-i18n="products.categories.grease.items.industrial_grease.description"></p>
+            <div id="grease" class="tab-content">
+                <div class="product-category">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <h4 data-i18n="products.categories.grease.items.industrial_grease.title"></h4>
+                            <p data-i18n="products.categories.grease.items.industrial_grease.description"></p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Cutting Fluid Category -->
-            <div class="product-category">
-                <h3 data-i18n="products.categories.cutting_fluid.title"></h3>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <h4 data-i18n="products.categories.cutting_fluid.items.industrial_cutting_fluid.title"></h4>
-                        <p data-i18n="products.categories.cutting_fluid.items.industrial_cutting_fluid.description"></p>
+            <div id="cutting" class="tab-content">
+                <div class="product-category">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <h4 data-i18n="products.categories.cutting_fluid.items.industrial_cutting_fluid.title"></h4>
+                            <p data-i18n="products.categories.cutting_fluid.items.industrial_cutting_fluid.description">
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Water-Based Products Category -->
-            <div class="product-category">
-                <h3 data-i18n="products.categories.water_based.title"></h3>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <h4 data-i18n="products.categories.water_based.items.antifreeze.title"></h4>
-                        <p data-i18n="products.categories.water_based.items.antifreeze.description"></p>
-                    </div>
-                    <div class="product-card">
-                        <h4 data-i18n="products.categories.water_based.items.radiator_water.title"></h4>
-                        <p data-i18n="products.categories.water_based.items.radiator_water.description"></p>
-                    </div>
-                    <div class="product-card">
-                        <h4 data-i18n="products.categories.water_based.items.battery_water.title"></h4>
-                        <p data-i18n="products.categories.water_based.items.battery_water.description"></p>
+            <div id="water" class="tab-content">
+                <div class="product-category">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <h4 data-i18n="products.categories.water_based.items.antifreeze.title"></h4>
+                            <p data-i18n="products.categories.water_based.items.antifreeze.description"></p>
+                        </div>
+                        <div class="product-card">
+                            <h4 data-i18n="products.categories.water_based.items.radiator_water.title"></h4>
+                            <p data-i18n="products.categories.water_based.items.radiator_water.description"></p>
+                        </div>
+                        <div class="product-card">
+                            <h4 data-i18n="products.categories.water_based.items.battery_water.title"></h4>
+                            <p data-i18n="products.categories.water_based.items.battery_water.description"></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -211,18 +250,44 @@
     <section id="faq-llm" class="faq">
         <div class="container">
             <h2 data-i18n="faq.title"></h2>
-
-            <h3 data-i18n="faq.questions.0.question"></h3>
-            <p data-i18n="faq.questions.0.answer"></p>
-
-            <h3 data-i18n="faq.questions.1.question"></h3>
-            <p data-i18n="faq.questions.1.answer"></p>
-
-            <h3 data-i18n="faq.questions.2.question"></h3>
-            <p data-i18n="faq.questions.2.answer"></p>
-
-            <h3 data-i18n="faq.questions.3.question"></h3>
-            <p data-i18n="faq.questions.3.answer"></p>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.questions.0.question"></span>
+                        <i class="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.questions.0.answer"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.questions.1.question"></span>
+                        <i class="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.questions.1.answer"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.questions.2.question"></span>
+                        <i class="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.questions.2.answer"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.questions.3.question"></span>
+                        <i class="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.questions.3.answer"></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -254,11 +319,34 @@
 
     <!-- Footer Section with Company Info -->
     <footer>
-        <div class="container">
-            <p data-i18n="footer.company"></p>
-            <p data-i18n="footer.location"></p>
-            <p><span data-i18n="footer.phone_label"></span> <span dir="ltr" data-i18n="footer.phone_number"></span></p>
-            <p>&copy; <span id="year"></span> <span data-i18n="footer.copyright"></span></p>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="static/images/darman_image_main.png" data-i18n="header.logo_alt" alt="" class="footer-logo">
+                <p data-i18n="footer.company" class="footer-company-name"></p>
+                <p data-i18n="brand_intro.content" class="footer-desc"></p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.quick_links_title">دسترسی سریع</h4>
+                <ul class="footer-links">
+                    <li><a href="#about" data-i18n="about.title"></a></li>
+                    <li><a href="#products" data-i18n="products.title"></a></li>
+                    <li><a href="#advantages" data-i18n="advantages.title"></a></li>
+                    <li><a href="#faq-llm" data-i18n="faq.title"></a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact_title">ارتباط با ما</h4>
+                <div class="footer-contact-info">
+                    <p><span data-i18n="footer.location"></span></p>
+                    <p><span data-i18n="footer.phone_label"></span> <span dir="ltr"
+                            data-i18n="footer.phone_number"></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="year"></span> <span data-i18n="footer.copyright"></span></p>
+            </div>
         </div>
     </footer>
 
