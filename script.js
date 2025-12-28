@@ -139,7 +139,7 @@ document.querySelectorAll(".dropdown-content a").forEach((link) => {
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     const href = this.getAttribute("href");
-    
+
     // Ignore links that are just "#" or don't point to an element
     if (href === "#" || !href.startsWith("#")) return;
 
