@@ -1,11 +1,23 @@
 // Current language
-let currentLang = localStorage.getItem("selectedLanguage") || "persian";
+let currentLang = localStorage.getItem("selectedLanguage") || "fa";
 
 // Typewriter timeout for managing concurrent effects
 let typewriterTimeout;
 
 // Function to load language
 function loadLanguage(lang) {
+  // Map old language names to new codes if necessary
+  const langMap = {
+    persian: "fa",
+    english: "en",
+    arabic: "ar",
+    turkish: "tr",
+    russian: "ru",
+  };
+  if (langMap[lang]) {
+    lang = langMap[lang];
+  }
+
   currentLang = lang;
   localStorage.setItem("selectedLanguage", lang);
 
@@ -65,20 +77,15 @@ function loadLanguage(lang) {
       }
 
       // Update HTML attributes and direction
-      const isRTL = lang === "persian" || lang === "arabic";
+      const isRTL = lang === "fa" || lang === "ar";
       document.body.style.direction = isRTL ? "rtl" : "ltr";
-
-      if (lang === "english") document.documentElement.lang = "en";
-      else if (lang === "arabic") document.documentElement.lang = "ar";
-      else if (lang === "turkish") document.documentElement.lang = "tr";
-      else if (lang === "russian") document.documentElement.lang = "ru";
-      else document.documentElement.lang = "fa";
+      document.documentElement.lang = lang;
 
       // Update structured data script
       const existingScript = document.getElementById("structured-data-script");
       if (existingScript) existingScript.remove();
       const newScript = document.createElement("script");
-      newScript.src = `LLMO/${lang}-data.js`;
+      newScript.src = `LLMO/${lang}-data.js?v=${new Date().getTime()}`;
       newScript.id = "structured-data-script";
       document.head.appendChild(newScript);
 
@@ -131,9 +138,14 @@ document.querySelectorAll(".dropdown-content a").forEach((link) => {
 // Smooth Scrolling for Internal Links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
+    const href = this.getAttribute("href");
+    
+    // Ignore links that are just "#" or don't point to an element
+    if (href === "#" || !href.startsWith("#")) return;
+
+    const target = document.querySelector(href);
     if (target) {
+      e.preventDefault();
       target.scrollIntoView({
         behavior: "smooth",
         block: "start",
