@@ -120,7 +120,7 @@ header .container {
 
 /* Logo Image Styling */
 .logo {
-    max-width: 120px;
+    max-width: 30px;
     height: auto;
 }
 
@@ -1002,7 +1002,7 @@ footer {
 }
 
 .footer-logo {
-    max-width: 140px;
+    max-width: 100px;
     margin-bottom: 16px;
     filter: brightness(0) invert(1); /* Make logo white */
 }
