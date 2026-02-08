@@ -115,3 +115,383 @@ footer:
   phone_label: "Telefon Numarası:"
   phone_number: "0921 972 6349"
   copyright: "Darman Ravankar Pars. Tüm hakları saklıdır."
+
+products_detailed:
+  common:
+    applications: "Uygulamalar"
+    specs: "Teknik Özellikler"
+  specs_labels:
+    iso_viscosity: "ISO Viskozitesi"
+    base_oil_type: "Baz Yağ Tipi"
+    viscosity_index: "Viskozite İndeksi"
+    flash_point: "Parlama Noktası"
+    pour_point: "Akma Noktası"
+    standard: "Standart"
+    max_work_temp: "Maks. Çalışma Sıcaklığı"
+    thermal_stability: "Termal Kararlılık"
+    breakdown_voltage: "Arıza Gerilimi"
+    viscosity_40c: "40°C'de Viskozite"
+    oxidation_resistance: "Oksidasyon Direnci"
+    viscosity: "Viskozite"
+    api_level: "API Seviyesi"
+    base_oil: "Baz Yağ"
+    type: "Tip"
+    temp_range: "Sıcaklık Aralığı"
+    dry_boiling_point: "Kuru Kaynama Noktası"
+    nlgi_grade: "NLGI Sınıfı"
+    dropping_point: "Damlama Noktası"
+    water_resistance: "Su Direnci"
+    mixing_ratio: "Karışım Oranı"
+    corrosion_protection: "Korozyon Koruması"
+    color: "Renk"
+    freezing_point: "Donma Noktası"
+    lifespan: "Ömür"
+    purity: "Saflık"
+    electrical_conductivity: "Elektriksel İletkenlik"
+    ph: "pH Seviyesi"
+  items:
+    hlp46:
+      title: "Iris Hidrolik Yağı HLP 46"
+      desc: "Orta ve yüksek basınçlı hidrolik sistemler için uygun, mükemmel aşınma önleyici özelliklere ve termal kararlılığa sahip yüksek kaliteli endüstriyel hidrolik yağı."
+      apps:
+        - "Endüstriyel Makineler"
+        - "Hidrolik Presler"
+        - "Plastik Enjeksiyon Makineleri"
+        - "Otomatik Üretim Hatları"
+      specs:
+        iso_viscosity: "46"
+        base_oil_type: "Mineral"
+        viscosity_index: ">= 95"
+        flash_point: ">= 210°C"
+        pour_point: "<= -24°C"
+        standard: "DIN 51524 Part 2 (HLP)"
+    hvlp68:
+      title: "Iris Hidrolik Yağı HVLP 68"
+      desc: "Aşırı sıcaklık değişimlerine dayanıklı, zorlu çevre koşullarında çalışan sistemler için uygun hidrolik yağı."
+      apps:
+        - "İnşaat Ekipmanları"
+        - "Dış Mekan Hidrolik Sistemleri"
+        - "Madencilik Ekipmanları"
+      specs:
+        iso_viscosity: "68"
+        base_oil_type: "Mineral"
+        viscosity_index: ">= 150"
+        flash_point: ">= 215°C"
+        pour_point: "<= -30°C"
+        standard: "DIN 51524 Part 3 (HVLP)"
+    ht32:
+      title: "Iris Isı Transfer Yağı HT-32"
+      desc: "Kapalı ve açık ısıtma sistemleri için yüksek termal kararlılığa sahip ısı transfer yağı."
+      apps:
+        - "Endüstriyel Kazanlar"
+        - "Isı Eşanjörleri"
+        - "Gıda ve Tekstil Endüstrileri"
+      specs:
+        iso_viscosity: "32"
+        max_work_temp: "300°C"
+        flash_point: ">= 230°C"
+        thermal_stability: "Yüksek"
+    ht68:
+      title: "Iris Isı Transfer Yağı HT-68"
+      desc: "Uzun ömürlü ve termal bozulmaya karşı dirençli yüksek sıcaklık ısı transfer yağı."
+      apps:
+        - "Sürekli Üretim Hatları"
+        - "Endüstriyel Fırınlar"
+      specs:
+        iso_viscosity: "68"
+        max_work_temp: "320°C"
+        flash_point: ">= 235°C"
+        thermal_stability: "Çok Yüksek"
+    to10:
+      title: "Iris Transformatör Yağı TO-10"
+      desc: "Transformatörler ve elektrikli ekipmanlar için yüksek dielektrik dayanımına sahip elektriksel yalıtım yağı."
+      apps:
+        - "Transformatörler"
+        - "Dağıtım Panoları"
+        - "Endüstriyel Şalt Cihazları"
+      specs:
+        breakdown_voltage: ">= 70 kV"
+        viscosity_40c: "10 cSt"
+        flash_point: ">= 140°C"
+        standard: "IEC 60296"
+    to20:
+      title: "Iris Transformatör Yağı TO-20"
+      desc: "Yüksek voltajlı sistemler için yüksek termal kararlılığa sahip transformatör yağı."
+      apps:
+        - "Yüksek Voltajlı Transformatörler"
+        - "Alt İstasyonlar"
+      specs:
+        breakdown_voltage: ">= 75 kV"
+        viscosity_40c: "20 cSt"
+        flash_point: ">= 145°C"
+        standard: "IEC 60296"
+    iso46_turbine:
+      title: "Iris Türbin Yağı ISO 46"
+      desc: "Buhar ve gaz türbinleri için anti-oksidasyon ve korozyon önleyici özelliklere sahip türbin yağı."
+      apps:
+        - "Buhar Türbinleri"
+        - "Gaz Türbinleri"
+        - "Enerji Santralleri"
+      specs:
+        iso_viscosity: "46"
+        flash_point: ">= 220°C"
+        oxidation_resistance: "Yüksek"
+        standard: "DIN 51515"
+    iso68_turbine:
+      title: "Iris Türbin Yağı ISO 68"
+      desc: "Zorlu koşullar ve yüksek yükler için ağır hizmet tipi türbin yağı."
+      apps:
+        - "Ağır Sanayi Türbinleri"
+        - "Büyük Jeneratörler"
+      specs:
+        iso_viscosity: "68"
+        flash_point: ">= 225°C"
+        oxidation_resistance: "Çok Yüksek"
+        standard: "DIN 51515"
+    5w30_sp:
+      title: "Iris Motor Yağı 5W-30 SP"
+      desc: "Modern araçlar ve turboşarjlı motorlar için tam sentetik motor yağı."
+      apps:
+        - "Modern Binek Araçlar"
+        - "Turbo Motorlar"
+      specs:
+        viscosity: "5W-30"
+        api_level: "SP"
+        base_oil: "Tam Sentetik"
+    10w40_sn:
+      title: "Iris Motor Yağı 10W-40 SN"
+      desc: "Hafif benzinli ve dizel araçlar için yarı sentetik motor yağı."
+      apps:
+        - "Binek Araçlar"
+        - "Hafif Ticari Araçlar"
+      specs:
+        viscosity: "10W-40"
+        api_level: "SN"
+        base_oil: "Yarı Sentetik"
+    20w50_sl:
+      title: "Iris Motor Yağı 20W-50 SL"
+      desc: "Eski araçlar ve zorlu çalışma koşulları için mineral motor yağı."
+      apps:
+        - "Eski Araçlar"
+        - "Sıcak İklimler"
+      specs:
+        viscosity: "20W-50"
+        api_level: "SL"
+        base_oil: "Mineral"
+    75w90_gl5:
+      title: "Iris Dişli Yağı 75W-90 GL-5"
+      desc: "Yüksek basınç toleransı ve mükemmel yağlama özelliğine sahip manuel şanzıman sıvısı."
+      apps:
+        - "Manuel Şanzıman"
+        - "Diferansiyeller"
+      specs:
+        viscosity: "75W-90"
+        api_level: "GL-5"
+        base_oil: "Yarı Sentetik"
+    atf_dexron_iii:
+      title: "Iris Otomatik Şanzıman Sıvısı ATF Dexron III"
+      desc: "Pürüzsüz performans ve termal kararlılığa sahip otomatik şanzıman sıvısı."
+      apps:
+        - "Otomatik Şanzıman"
+      specs:
+        standard: "Dexron III"
+        oxidation_resistance: "Yüksek"
+    psf:
+      title: "Iris Hidrolik Direksiyon Sıvısı PSF"
+      desc: "Pürüzsüz ve sessiz direksiyon çalışması için hidrolik sıvı."
+      apps:
+        - "Hidrolik Direksiyon Sistemleri"
+      specs:
+        type: "PSF"
+        temp_range: "-40 ila +130°C"
+    dot4:
+      title: "Iris Fren Hidroliği DOT4"
+      desc: "Fren sistemi güvenliği için yüksek kaynama noktasına sahip fren hidroliği."
+      apps:
+        - "Disk ve Kampana Fren Sistemleri"
+      specs:
+        standard: "DOT4"
+        dry_boiling_point: ">= 230°C"
+    dot5_1:
+      title: "Iris Fren Hidroliği DOT5.1"
+      desc: "Modern araçlar ve ABS sistemleri için gelişmiş fren hidroliği."
+      apps:
+        - "ABS Fren Sistemleri"
+      specs:
+        standard: "DOT5.1"
+        dry_boiling_point: ">= 260°C"
+    0w20_sn:
+      title: "Iris Motor Yağı 0W-20 SN"
+      desc: "Yeni araçlar için yakıt tasarruflu tam sentetik motor yağı."
+      apps:
+        - "Yeni Binek Araçlar"
+        - "Hibrit/Turbo Motorlar"
+      specs:
+        viscosity: "0W-20"
+        api_level: "SN"
+        base_oil: "Tam Sentetik"
+    5w40_sm:
+      title: "Iris Motor Yağı 5W-40 SM"
+      desc: "Çeşitli sıcaklıklarda yüksek performansa sahip yarı sentetik yağ."
+      apps:
+        - "Binek Araçlar"
+        - "Hafif Benzinli/Dizel Motorlar"
+      specs:
+        viscosity: "5W-40"
+        api_level: "SM"
+        base_oil: "Yarı Sentetik"
+    ep1:
+      title: "Iris Endüstriyel Gres EP1"
+      desc: "Yataklar ve hareketli parçalar için, yüksek basınç ve sıcaklığa dayanıklı endüstriyel gres."
+      apps:
+        - "Rulmanlar"
+        - "Hareketli Endüstriyel Parçalar"
+        - "Dişliler"
+      specs:
+        nlgi_grade: "1"
+        dropping_point: ">= 180°C"
+        water_resistance: "Yüksek"
+    ep2:
+      title: "Iris Endüstriyel Gres EP2"
+      desc: "Aşınma önleyici özelliklere ve oksidasyon direncine sahip çok amaçlı gres."
+      apps:
+        - "Bilyalı Rulmanlar"
+        - "Ağır Hizmet Rulmanları"
+        - "İmalat Makineleri"
+      specs:
+        nlgi_grade: "2"
+        dropping_point: ">= 190°C"
+        water_resistance: "Çok Yüksek"
+    ep3:
+      title: "Iris Endüstriyel Gres EP3"
+      desc: "Ağır sanayi için basınca ve neme dayanıklı gres."
+      apps:
+        - "Endüstriyel Parçalar"
+        - "İnşaat Makineleri"
+        - "Presler"
+      specs:
+        nlgi_grade: "3"
+        dropping_point: ">= 200°C"
+        water_resistance: "Yüksek"
+    ep0:
+      title: "Iris Endüstriyel Gres EP0"
+      desc: "İlk yağlama ve hafif ekipmanlar için hafif gres."
+      apps:
+        - "Küçük Dişliler"
+        - "Hafif Rulmanlar"
+        - "Endüstriyel El Aletleri"
+      specs:
+        nlgi_grade: "0"
+        dropping_point: ">= 160°C"
+        water_resistance: "Orta"
+    ep4:
+      title: "Iris Endüstriyel Gres EP4"
+      desc: "Ağır endüstriyel makineler için ısıya ve basınca dayanıklı gres."
+      apps:
+        - "Madencilik Makineleri"
+        - "Ağır Ekipmanlar"
+        - "Büyük Dişliler"
+      specs:
+        nlgi_grade: "4"
+        dropping_point: ">= 210°C"
+        water_resistance: "Yüksek"
+    cnc_coolant:
+      title: "Iris CNC Soğutma Sıvısı"
+      desc: "İşleme ve metal işleme için soğutma ve yağlama özelliklerine sahip endüstriyel soğutma sıvısı."
+      apps:
+        - "CNC Makineleri"
+        - "Tornalar"
+        - "Freze Makineleri"
+      specs:
+        mixing_ratio: "5% - 10%"
+        corrosion_protection: "Mükemmel"
+    premium_coolant:
+      title: "Iris Premium Soğutma Sıvısı"
+      desc: "Yüksek soğutma gücü ve korozyon korumasına sahip soğutma sıvısı."
+      apps:
+        - "Tornalar"
+        - "Metal Kesme"
+        - "Endüstriyel CNC"
+      specs:
+        mixing_ratio: "4% - 8%"
+        corrosion_protection: "Çok İyi"
+    heavy_duty_coolant:
+      title: "Iris Heavy Duty Soğutma Sıvısı"
+      desc: "Uzun dayanıklılığa sahip ağır işleme operasyonları için uygundur."
+      apps:
+        - "Ağır Tornalama"
+        - "Sert Metal Frezeleme"
+        - "Metal Endüstrileri"
+      specs:
+        mixing_ratio: "6% - 12%"
+        corrosion_protection: "Mükemmel"
+    coolmax:
+      title: "Iris CoolMax Soğutma Sıvısı"
+      desc: "Hassas ekipmanlar için hızlı soğutma performansı."
+      apps:
+        - "CNC Makineleri"
+        - "Hassas Aletler"
+        - "Hafif Metal Endüstrileri"
+      specs:
+        mixing_ratio: "5% - 9%"
+        corrosion_protection: "İyi"
+    eco_coolant:
+      title: "Iris Eco Soğutma Sıvısı"
+      desc: "Uygun yağlama ve soğutma sağlayan çevre dostu ürün."
+      apps:
+        - "Hafif Makineler"
+        - "Küçük Metal İşleri"
+        - "Eğitim Amaçlı CNC"
+      specs:
+        mixing_ratio: "3% - 7%"
+        corrosion_protection: "İyi"
+    long_life_antifreeze:
+      title: "Iris Uzun Ömürlü Antifriz"
+      desc: "Kışın araç soğutma sistemlerinin tam korunması için uzun ömürlü antifriz."
+      apps:
+        - "Araç Soğutma Sistemleri"
+        - "Endüstriyel Motorlar"
+      specs:
+        type: "OAT"
+        color: "Kırmızı"
+        freezing_point: "-37°C"
+        lifespan: "5 Yıl"
+    ultra_pure_radiator_water:
+      title: "Iris Ultra Saf Radyatör Suyu"
+      desc: "Araç ve endüstriyel motor soğutma sistemleri için ultra saf su."
+      apps:
+        - "Araç Radyatörleri"
+        - "Endüstriyel Radyatörler"
+      specs:
+        purity: "99.9%"
+        electrical_conductivity: "< 5 µS/cm"
+    battery_water:
+      title: "Iris Akü Suyu"
+      desc: "Asitli akülerin şarjı ve bakımı için yüksek saflıkta su."
+      apps:
+        - "Araç Aküleri"
+        - "Endüstriyel Aküler"
+      specs:
+        purity: "99.9%"
+        ph: "7 ± 0.2"
+    red_cool_antifreeze:
+      title: "Iris Kırmızı Soğutma Antifrizi"
+      desc: "Binek ve ağır hizmet araçları için uzun ömürlü antifriz."
+      apps:
+        - "Araç Soğutma Sistemleri"
+        - "Endüstriyel Makineler"
+      specs:
+        type: "OAT"
+        color: "Kırmızı"
+        freezing_point: "-35°C"
+        lifespan: "4 Yıl"
+    standard_radiator_water:
+      title: "Iris Standart Radyatör Suyu"
+      desc: "Araç radyatörleri ve endüstriyel ekipmanlar için standart su."
+      apps:
+        - "Araç Radyatörleri"
+        - "Endüstriyel Radyatörler"
+      specs:
+        purity: "99.5%"
+        electrical_conductivity: "< 10 µS/cm"
+

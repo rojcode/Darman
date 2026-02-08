@@ -36,6 +36,10 @@ function loadLanguage(lang) {
     })
     .then((yamlText) => {
       const data = jsyaml.load(yamlText);
+
+      // Render products
+      renderProducts(data);
+
       function getValue(key) {
         const keys = key.split(".");
         let value = data;
@@ -91,14 +95,13 @@ function loadLanguage(lang) {
 
       // Update dropdown button
       const link = document.querySelector(
-        `.dropdown-content a[data-lang="${lang}"]`
+        `.dropdown-content a[data-lang="${lang}"]`,
       );
       if (link) {
         const flagImg = link.querySelector("img");
         const langText = link.textContent.trim();
-        document.querySelector(
-          ".dropbtn"
-        ).innerHTML = `<img src="${flagImg.src}" alt="" class="flag-icon"> ${langText} <i class="arrow-down"></i>`;
+        document.querySelector(".dropbtn").innerHTML =
+          `<img src="${flagImg.src}" alt="" class="flag-icon"> ${langText} <i class="arrow-down"></i>`;
       }
     })
     .catch((error) => {
@@ -271,3 +274,108 @@ document.querySelectorAll(".faq-question").forEach((question) => {
     }
   });
 });
+
+// Render Products dynamically based on translation data
+function renderProducts(data) {
+  if (!data.products_detailed) return;
+
+  const productsData = data.products_detailed;
+  const items = productsData.items;
+  const common = productsData.common || {};
+  const specLabels = productsData.specs_labels || {};
+
+  const categoryMap = {
+    industrial: [
+      "hlp46",
+      "hvlp68",
+      "ht32",
+      "ht68",
+      "to10",
+      "to20",
+      "iso46_turbine",
+      "iso68_turbine",
+    ],
+    automotive: [
+      "5w30_sp",
+      "10w40_sn",
+      "20w50_sl",
+      "75w90_gl5",
+      "atf_dexron_iii",
+      "psf",
+      "dot4",
+      "dot5_1",
+      "0w20_sn",
+      "5w40_sm",
+    ],
+    grease: ["ep1", "ep2", "ep3", "ep0", "ep4"],
+    cutting: [
+      "cnc_coolant",
+      "premium_coolant",
+      "heavy_duty_coolant",
+      "coolmax",
+      "eco_coolant",
+    ],
+    water: [
+      "long_life_antifreeze",
+      "ultra_pure_radiator_water",
+      "battery_water",
+      "red_cool_antifreeze",
+      "standard_radiator_water",
+    ],
+  };
+
+  Object.keys(categoryMap).forEach((category) => {
+    const containerId = `${category}-grid`;
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    container.innerHTML = ""; // Clear existing content
+
+    categoryMap[category].forEach((productId) => {
+      const product = items[productId];
+      if (!product) return;
+
+      const card = document.createElement("div");
+      card.className = "product-card";
+
+      // Applications list
+      let appsHtml = "";
+      if (product.apps && Array.isArray(product.apps)) {
+        appsHtml =
+          `<h5>${common.applications || "Applications"}:</h5><ul>` +
+          product.apps.map((app) => `<li>${app}</li>`).join("") +
+          `</ul>`;
+      }
+
+      // Specs list
+      let specsHtml = "";
+      if (product.specs) {
+        specsHtml = `<h5>${common.specs || "Specifications"}:</h5><ul>`;
+        for (const [key, value] of Object.entries(product.specs)) {
+          const label = specLabels[key] || key;
+          specsHtml += `<li><strong>${label}:</strong> ${value}</li>`;
+        }
+        specsHtml += `</ul>`;
+      }
+
+      card.innerHTML = `
+                <h4>${product.title}</h4>
+                <p>${product.desc}</p>
+                <div class="product-details">
+                    ${appsHtml}
+                    ${specsHtml}
+                </div>
+            `;
+
+      // Re-bind hover effect
+      card.addEventListener("mouseenter", () => {
+        card.style.transform = "scale(1.05)";
+      });
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "scale(1)";
+      });
+
+      container.appendChild(card);
+    });
+  });
+}

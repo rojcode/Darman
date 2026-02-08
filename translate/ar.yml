@@ -117,3 +117,382 @@ footer:
   copyright: "دارمان روانکار پارس. جميع الحقوق محفوظة."
   quick_links_title: "روابط سريعة"
   contact_title: "اتصل بنا"
+
+products_detailed:
+  common:
+    applications: "الاستخدامات"
+    specs: "المواصفات الفنية"
+  specs_labels:
+    iso_viscosity: "لزوجة ISO"
+    base_oil_type: "نوع الزيت الأساسي"
+    viscosity_index: "مؤشر اللزوجة"
+    flash_point: "نقطة الوميض"
+    pour_point: "نقطة الانصباب"
+    standard: "المعيار"
+    max_work_temp: "أقصى درجة حرارة للتشغيل"
+    thermal_stability: "الاستقرار الحراري"
+    breakdown_voltage: "جهد الانهيار"
+    viscosity_40c: "اللزوجة عند 40 درجة مئوية"
+    oxidation_resistance: "مقاومة الأكسدة"
+    viscosity: "اللزوجة"
+    api_level: "مستوى API"
+    base_oil: "الزيت الأساسي"
+    type: "النوع"
+    temp_range: "نطاق درجة الحرارة"
+    dry_boiling_point: "نقطة الغليان الجافة"
+    nlgi_grade: "درجة NLGI"
+    dropping_point: "نقطة التقطير"
+    water_resistance: "مقاومة الماء"
+    mixing_ratio: "نسبة الخلط"
+    corrosion_protection: "الحماية من التآكل"
+    color: "اللون"
+    freezing_point: "نقطة التجمد"
+    lifespan: "العمر الافتراضي"
+    purity: "النقاء"
+    electrical_conductivity: "الموصلية الكهربائية"
+    ph: "الرقم الهيدروجيني (pH)"
+  items:
+    hlp46:
+      title: "زيت هيدروليك آيريس HLP 46"
+      desc: "زيت هيدروليكي صناعي عالي الجودة، مناسب للأنظمة الهيدروليكية ذات الضغط المتوسط والعالي، مع خصائص مقاومة للتآكل واستقرار حراري ممتاز."
+      apps:
+        - "الآلات الصناعية"
+        - "المكابس الهيدروليكية"
+        - "آلات حقن البلاستيك"
+        - "خطوط الإنتاج الأوتوماتيكية"
+      specs:
+        iso_viscosity: "46"
+        base_oil_type: "معدني"
+        viscosity_index: ">= 95"
+        flash_point: ">= 210°C"
+        pour_point: "<= -24°C"
+        standard: "DIN 51524 Part 2 (HLP)"
+    hvlp68:
+      title: "زيت هيدروليك آيريس HVLP 68"
+      desc: "زيت هيدروليكي مقاوم للتغيرات الحادة في درجات الحرارة، مناسب للأنظمة التي تعمل في ظروف بيئية قاسية."
+      apps:
+        - "معدات البناء"
+        - "الأنظمة الهيدروليكية الخارجية"
+        - "معدات التعدين"
+      specs:
+        iso_viscosity: "68"
+        base_oil_type: "معدني"
+        viscosity_index: ">= 150"
+        flash_point: ">= 215°C"
+        pour_point: "<= -30°C"
+        standard: "DIN 51524 Part 3 (HVLP)"
+    ht32:
+      title: "زيت نقل الحرارة آيريس HT-32"
+      desc: "زيت نقل حرارة باستقرار حراري عالي لأنظمة التدفئة المغلقة والمفتوحة."
+      apps:
+        - "الغلايات الصناعية"
+        - "المبادلات الحرارية"
+        - "الصناعات الغذائية والنسيجية"
+      specs:
+        iso_viscosity: "32"
+        max_work_temp: "300°C"
+        flash_point: ">= 230°C"
+        thermal_stability: "عالية"
+    ht68:
+      title: "زيت نقل الحرارة آيريس HT-68"
+      desc: "زيت نقل حرارة لدرجات الحرارة العالية مع عمر طويل ومقاومة للتكسر الحراري."
+      apps:
+        - "خطوط الإنتاج المستمر"
+        - "الأفران الصناعية"
+      specs:
+        iso_viscosity: "68"
+        max_work_temp: "320°C"
+        flash_point: ">= 235°C"
+        thermal_stability: "عالية جداً"
+    to10:
+      title: "زيت محولات آيريس TO-10"
+      desc: "زيت عازل كهربائي ذو قوة عزل عالية للمحولات والمعدات الكهربائية."
+      apps:
+        - "المحولات"
+        - "لوحات التوزيع"
+        - "المفاتيح الكهربائية الصناعية"
+      specs:
+        breakdown_voltage: ">= 70 kV"
+        viscosity_40c: "10 cSt"
+        flash_point: ">= 140°C"
+        standard: "IEC 60296"
+    to20:
+      title: "زيت محولات آيريس TO-20"
+      desc: "زيت محولات ذو استقرار حراري عالي لأنظمة الجهد العالي."
+      apps:
+        - "محولات الجهد العالي"
+        - "محطات التحويل"
+      specs:
+        breakdown_voltage: ">= 75 kV"
+        viscosity_40c: "20 cSt"
+        flash_point: ">= 145°C"
+        standard: "IEC 60296"
+    iso46_turbine:
+      title: "زيت توربين آيريس ISO 46"
+      desc: "زيت توربين بخصائص مضادة للأكسدة والتآكل للتوربينات البخارية والغازية."
+      apps:
+        - "توربينات بخارية"
+        - "توربينات غازية"
+        - "محطات الطاقة"
+      specs:
+        iso_viscosity: "46"
+        flash_point: ">= 220°C"
+        oxidation_resistance: "عالية"
+        standard: "DIN 51515"
+    iso68_turbine:
+      title: "زيت توربين آيريس ISO 68"
+      desc: "زيت توربين للخدمة الشاقة للظروف القاسية والأحمال العالية."
+      apps:
+        - "توربينات صناعية ثقيلة"
+        - "مولدات كبيرة"
+      specs:
+        iso_viscosity: "68"
+        flash_point: ">= 225°C"
+        oxidation_resistance: "عالية جداً"
+        standard: "DIN 51515"
+    5w30_sp:
+      title: "زيت محرك آيريس 5W-30 SP"
+      desc: "زيت محرك تخليقي بالكامل للمركبات الحديثة والمحركات المزودة بشاحن توربيني."
+      apps:
+        - "سيارات الركاب الحديثة"
+        - "محركات التيربو"
+      specs:
+        viscosity: "5W-30"
+        api_level: "SP"
+        base_oil: "تخليقي بالكامل"
+    10w40_sn:
+      title: "زيت محرك آيريس 10W-40 SN"
+      desc: "زيت محرك شبه تخليقي لمركبات البنزين والديزل الخفيفة."
+      apps:
+        - "سيارات الركاب"
+        - "المركبات التجارية الخفيفة"
+      specs:
+        viscosity: "10W-40"
+        api_level: "SN"
+        base_oil: "شبه تخليقي"
+    20w50_sl:
+      title: "زيت محرك آيريس 20W-50 SL"
+      desc: "زيت محرك معدني للمركبات القديمة وظروف التشغيل القاسية."
+      apps:
+        - "المركبات القديمة"
+        - "المناطق الحارة"
+      specs:
+        viscosity: "20W-50"
+        api_level: "SL"
+        base_oil: "معدني"
+    75w90_gl5:
+      title: "زيت تروس آيريس 75W-90 GL-5"
+      desc: "سائل ناقل حركة يدوي بقدرة تحمل عالية للضغط وتشحيم ممتاز."
+      apps:
+        - "ناقل حركة يدوي"
+        - "التروس التفاضلية"
+      specs:
+        viscosity: "75W-90"
+        api_level: "GL-5"
+        base_oil: "شبه تخليقي"
+    atf_dexron_iii:
+      title: "زيت ناقل حركة أوتوماتيكي آيريس ATF Dexron III"
+      desc: "سائل ناقل حركة أوتوماتيكي بأداء سلس واستقرار حراري."
+      apps:
+        - "ناقل حركة أوتوماتيكي"
+      specs:
+        standard: "Dexron III"
+        oxidation_resistance: "عالية"
+    psf:
+      title: "زيت باور ستيرنج آيريس PSF"
+      desc: "سائل هيدروليكي لتشغيل سلس وهادئ لنظام التوجيه."
+      apps:
+        - "أنظمة التوجيه الهيدروليكي"
+      specs:
+        type: "PSF"
+        temp_range: "-40 إلى +130°C"
+    dot4:
+      title: "زيت فرامل آيريس DOT4"
+      desc: "سائل فرامل بنقطة غليان عالية لسلامة نظام الفرامل."
+      apps:
+        - "أنظمة الفرامل القرصية والطبلية"
+      specs:
+        standard: "DOT4"
+        dry_boiling_point: ">= 230°C"
+    dot5_1:
+      title: "زيت فرامل آيريس DOT5.1"
+      desc: "سائل فرامل متطور للمركبات الحديثة وأنظمة ABS."
+      apps:
+        - "أنظمة فرامل ABS"
+      specs:
+        standard: "DOT5.1"
+        dry_boiling_point: ">= 260°C"
+    0w20_sn:
+      title: "زيت محرك آيريس 0W-20 SN"
+      desc: "زيت محرك تخليقي بالكامل موفر للوقود للمركبات الجديدة."
+      apps:
+        - "سيارات الركاب الجديدة"
+        - "محركات هجينة/تيربو"
+      specs:
+        viscosity: "0W-20"
+        api_level: "SN"
+        base_oil: "تخليقي بالكامل"
+    5w40_sm:
+      title: "زيت محرك آيريس 5W-40 SM"
+      desc: "زيت شبه تخليقي بأداء عالي في درجات حرارة مختلفة."
+      apps:
+        - "سيارات الركاب"
+        - "محركات البنزين/الديزل الخفيفة"
+      specs:
+        viscosity: "5W-40"
+        api_level: "SM"
+        base_oil: "شبه تخليقي"
+    ep1:
+      title: "شحم صناعي آيريس EP1"
+      desc: "شحم صناعي للمحامل والأجزاء المتحركة، مقاوم للضغط العالي ودرجات الحرارة."
+      apps:
+        - "المحامل"
+        - "الأجزاء الصناعية المتحركة"
+        - "التروس"
+      specs:
+        nlgi_grade: "1"
+        dropping_point: ">= 180°C"
+        water_resistance: "عالية"
+    ep2:
+      title: "شحم صناعي آيريس EP2"
+      desc: "شحم متعدد الأغراض بخصائص مضادة للتآكل ومقاومة للأكسدة."
+      apps:
+        - "المحامل الكروية"
+        - "محامل الخدمة الشاقة"
+        - "آلات التصنيع"
+      specs:
+        nlgi_grade: "2"
+        dropping_point: ">= 190°C"
+        water_resistance: "عالية جداً"
+    ep3:
+      title: "شحم صناعي آيريس EP3"
+      desc: "شحم مقاوم للضغط والرطوبة للصناعات الثقيلة."
+      apps:
+        - "الأجزاء الصناعية"
+        - "معدات البناء"
+        - "المكابس"
+      specs:
+        nlgi_grade: "3"
+        dropping_point: ">= 200°C"
+        water_resistance: "عالية"
+    ep0:
+      title: "شحم صناعي آيريس EP0"
+      desc: "شحم خفيف للتشحيم الأولي والمعدات الخفيفة."
+      apps:
+        - "التروس الصغيرة"
+        - "المحامل الخفيفة"
+        - "الأدوات اليدوية الصناعية"
+      specs:
+        nlgi_grade: "0"
+        dropping_point: ">= 160°C"
+        water_resistance: "متوسطة"
+    ep4:
+      title: "شحم صناعي آيريس EP4"
+      desc: "شحم مقاوم للحرارة والضغط للآلات الصناعية الثقيلة."
+      apps:
+        - "معدات التعدين"
+        - "المعدات الثقيلة"
+        - "التروس الكبيرة"
+      specs:
+        nlgi_grade: "4"
+        dropping_point: ">= 210°C"
+        water_resistance: "عالية"
+    cnc_coolant:
+      title: "سائل تبريد CNC آيريس"
+      desc: "سائل تبريد صناعي بخصائص تبريد وتشحيم للتصنيع وتشغيل المعادن."
+      apps:
+        - "آلات CNC"
+        - "المخارط"
+        - "آلات التفريز"
+      specs:
+        mixing_ratio: "5% - 10%"
+        corrosion_protection: "ممتازة"
+    premium_coolant:
+      title: "سائل تبريد آيريس Premium"
+      desc: "سائل تبريد بقدرة تبريد عالية وحماية من التآكل."
+      apps:
+        - "المخارط"
+        - "قطع المعادن"
+        - "CNC الصناعية"
+      specs:
+        mixing_ratio: "4% - 8%"
+        corrosion_protection: "جيدة جداً"
+    heavy_duty_coolant:
+      title: "سائل تبريد آيريس Heavy Duty"
+      desc: "مناسب لعمليات التشغيل الثقيلة مع متانة طويلة."
+      apps:
+        - "الخراطة الثقيلة"
+        - "تفريز المعادن الصلبة"
+        - "الصناعات المعدنية"
+      specs:
+        mixing_ratio: "6% - 12%"
+        corrosion_protection: "ممتازة"
+    coolmax:
+      title: "سائل تبريد آيريس CoolMax"
+      desc: "أداء تبريد سريع للمعدات الدقيقة."
+      apps:
+        - "آلات CNC"
+        - "الأدوات الدقيقة"
+        - "صناعات المعادن الخفيفة"
+      specs:
+        mixing_ratio: "5% - 9%"
+        corrosion_protection: "جيدة"
+    eco_coolant:
+      title: "سائل تبريد آيريس Eco"
+      desc: "منتج صديق للبيئة مع تشحيم وتبريد مناسب."
+      apps:
+        - "الآلات الخفيفة"
+        - "الأعمال المعدنية الصغيرة"
+        - "CNC التعليمي"
+      specs:
+        mixing_ratio: "3% - 7%"
+        corrosion_protection: "جيدة"
+    long_life_antifreeze:
+      title: "مانع تجمد آيريس Long Life"
+      desc: "مانع تجمد طويل العمر لحماية كاملة لأنظمة تبريد السيارات في الشتاء."
+      apps:
+        - "أنظمة تبريد المركبات"
+        - "المحركات الصناعية"
+      specs:
+        type: "OAT"
+        color: "أحمر"
+        freezing_point: "-37°C"
+        lifespan: "5 سنوات"
+    ultra_pure_radiator_water:
+      title: "ماء رديتر آيريس Ultra Pure"
+      desc: "ماء فائق النقاء لأنظمة تبريد محركات السيارات والصناعة."
+      apps:
+        - "رديتر السيارات"
+        - "الرديترات الصناعية"
+      specs:
+        purity: "99.9%"
+        electrical_conductivity: "< 5 µS/cm"
+    battery_water:
+      title: "ماء بطارية آيريس"
+      desc: "ماء عالي النقاء لشحن وصيانة البطاريات الحمضية."
+      apps:
+        - "بطاريات السيارات"
+        - "البطاريات الصناعية"
+      specs:
+        purity: "99.9%"
+        ph: "7 ± 0.2"
+    red_cool_antifreeze:
+      title: "مانع تجمد آيريس Red Cool"
+      desc: "مانع تجمد طويل الأمد لسيارات الركاب والمركبات الثقيلة."
+      apps:
+        - "أنظمة تبريد السيارات"
+        - "الآلات الصناعية"
+      specs:
+        type: "OAT"
+        color: "أحمر"
+        freezing_point: "-35°C"
+        lifespan: "4 سنوات"
+    standard_radiator_water:
+      title: "ماء رديتر آيريس Standard"
+      desc: "ماء قياسي لرديترات السيارات والمعدات الصناعية."
+      apps:
+        - "رديتر السيارات"
+        - "الرديترات الصناعية"
+      specs:
+        purity: "99.5%"
+        electrical_conductivity: "< 10 µS/cm"

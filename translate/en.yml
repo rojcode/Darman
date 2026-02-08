@@ -117,3 +117,383 @@ footer:
   copyright: "Darman Ravankar Pars. All rights reserved."
   quick_links_title: "Quick Links"
   contact_title: "Contact Us"
+
+products_detailed:
+  common:
+    applications: "Applications"
+    specs: "Technical Specifications"
+  specs_labels:
+    iso_viscosity: "ISO Viscosity"
+    base_oil_type: "Base Oil Type"
+    viscosity_index: "Viscosity Index"
+    flash_point: "Flash Point"
+    pour_point: "Pour Point"
+    standard: "Standard"
+    max_work_temp: "Max Working Temp"
+    thermal_stability: "Thermal Stability"
+    breakdown_voltage: "Breakdown Voltage"
+    viscosity_40c: "Viscosity at 40°C"
+    oxidation_resistance: "Oxidation Resistance"
+    viscosity: "Viscosity"
+    api_level: "API Level"
+    base_oil: "Base Oil"
+    type: "Type"
+    temp_range: "Temperature Range"
+    dry_boiling_point: "Dry Boiling Point"
+    nlgi_grade: "NLGI Grade"
+    dropping_point: "Dropping Point"
+    water_resistance: "Water Resistance"
+    mixing_ratio: "Mixing Ratio"
+    corrosion_protection: "Corrosion Protection"
+    color: "Color"
+    freezing_point: "Freezing Point"
+    lifespan: "Lifespan"
+    purity: "Purity"
+    electrical_conductivity: "Electrical Conductivity"
+    ph: "pH Level"
+  items:
+    hlp46:
+      title: "Iris Hydraulic Oil HLP 46"
+      desc: "High-quality industrial hydraulic oil suitable for medium to high pressure hydraulic systems, with excellent anti-wear properties and thermal stability."
+      apps:
+        - "Industrial Machinery"
+        - "Hydraulic Presses"
+        - "Plastic Injection Machines"
+        - "Automated Production Lines"
+      specs:
+        iso_viscosity: "46"
+        base_oil_type: "Mineral"
+        viscosity_index: ">= 95"
+        flash_point: ">= 210°C"
+        pour_point: "<= -24°C"
+        standard: "DIN 51524 Part 2 (HLP)"
+    hvlp68:
+      title: "Iris Hydraulic Oil HVLP 68"
+      desc: "Hydraulic oil resistant to severe temperature changes, suitable for systems operating in harsh environmental conditions."
+      apps:
+        - "Construction Equipment"
+        - "Outdoor Hydraulic Systems"
+        - "Mining Equipment"
+      specs:
+        iso_viscosity: "68"
+        base_oil_type: "Mineral"
+        viscosity_index: ">= 150"
+        flash_point: ">= 215°C"
+        pour_point: "<= -30°C"
+        standard: "DIN 51524 Part 3 (HVLP)"
+    ht32:
+      title: "Iris Heat Transfer Oil HT-32"
+      desc: "Heat transfer oil with high thermal stability for closed and open heating systems."
+      apps:
+        - "Industrial Boilers"
+        - "Heat Exchangers"
+        - "Food and Textile Industries"
+      specs:
+        iso_viscosity: "32"
+        max_work_temp: "300°C"
+        flash_point: ">= 230°C"
+        thermal_stability: "High"
+    ht68:
+      title: "Iris Heat Transfer Oil HT-68"
+      desc: "High-temperature heat transfer oil with long life and resistance to thermal cracking."
+      apps:
+        - "Continuous Production Lines"
+        - "Industrial Furnaces"
+      specs:
+        iso_viscosity: "68"
+        max_work_temp: "320°C"
+        flash_point: ">= 235°C"
+        thermal_stability: "Very High"
+    to10:
+      title: "Iris Transformer Oil TO-10"
+      desc: "Electrical insulating oil with high dielectric strength for transformers and electrical equipment."
+      apps:
+        - "Transformers"
+        - "Distribution Panels"
+        - "Industrial Switchgears"
+      specs:
+        breakdown_voltage: ">= 70 kV"
+        viscosity_40c: "10 cSt"
+        flash_point: ">= 140°C"
+        standard: "IEC 60296"
+    to20:
+      title: "Iris Transformer Oil TO-20"
+      desc: "Transformer oil with high thermal stability for high-voltage systems."
+      apps:
+        - "High Voltage Transformers"
+        - "Substations"
+      specs:
+        breakdown_voltage: ">= 75 kV"
+        viscosity_40c: "20 cSt"
+        flash_point: ">= 145°C"
+        standard: "IEC 60296"
+    iso46_turbine:
+      title: "Iris Turbine Oil ISO 46"
+      desc: "Turbine oil with anti-oxidation and anti-corrosion properties for steam and gas turbines."
+      apps:
+        - "Steam Turbines"
+        - "Gas Turbines"
+        - "Power Plants"
+      specs:
+        iso_viscosity: "46"
+        flash_point: ">= 220°C"
+        oxidation_resistance: "High"
+        standard: "DIN 51515"
+    iso68_turbine:
+      title: "Iris Turbine Oil ISO 68"
+      desc: "Heavy-duty turbine oil for severe conditions and high loads."
+      apps:
+        - "Heavy Industrial Turbines"
+        - "Large Generators"
+      specs:
+        iso_viscosity: "68"
+        flash_point: ">= 225°C"
+        oxidation_resistance: "Very High"
+        standard: "DIN 51515"
+    5w30_sp:
+      title: "Iris Engine Oil 5W-30 SP"
+      desc: "Fully synthetic engine oil for modern vehicles and turbocharged engines."
+      apps:
+        - "Modern Passenger Cars"
+        - "Turbo Engines"
+      specs:
+        viscosity: "5W-30"
+        api_level: "SP"
+        base_oil: "Fully Synthetic"
+    10w40_sn:
+      title: "Iris Engine Oil 10W-40 SN"
+      desc: "Semi-synthetic engine oil for light gasoline and diesel vehicles."
+      apps:
+        - "Passenger Cars"
+        - "Light Commercial Vehicles"
+      specs:
+        viscosity: "10W-40"
+        api_level: "SN"
+        base_oil: "Semi-Synthetic"
+    20w50_sl:
+      title: "Iris Engine Oil 20W-50 SL"
+      desc: "Mineral engine oil for older vehicles and harsh operating conditions."
+      apps:
+        - "Older Vehicles"
+        - "Hot Climates"
+      specs:
+        viscosity: "20W-50"
+        api_level: "SL"
+        base_oil: "Mineral"
+    75w90_gl5:
+      title: "Iris Gear Oil 75W-90 GL-5"
+      desc: "Manual transmission fluid with high pressure tolerance and excellent lubrication."
+      apps:
+        - "Manual Transmission"
+        - "Differentials"
+      specs:
+        viscosity: "75W-90"
+        api_level: "GL-5"
+        base_oil: "Semi-Synthetic"
+    atf_dexron_iii:
+      title: "Iris Automatic Transmission Fluid ATF Dexron III"
+      desc: "Automatic transmission fluid with smooth performance and thermal stability."
+      apps:
+        - "Automatic Transmission"
+      specs:
+        standard: "Dexron III"
+        oxidation_resistance: "High"
+    psf:
+      title: "Iris Power Steering Fluid PSF"
+      desc: "Hydraulic fluid for smooth and quiet steering operation."
+      apps:
+        - "Power Steering Systems"
+      specs:
+        type: "PSF"
+        temp_range: "-40 to +130°C"
+    dot4:
+      title: "Iris Brake Fluid DOT4"
+      desc: "Brake fluid with high boiling point for brake system safety."
+      apps:
+        - "Disc and Drum Brake Systems"
+      specs:
+        standard: "DOT4"
+        dry_boiling_point: ">= 230°C"
+    dot5_1:
+      title: "Iris Brake Fluid DOT5.1"
+      desc: "Advanced brake fluid for modern vehicles and ABS systems."
+      apps:
+        - "ABS Brake Systems"
+      specs:
+        standard: "DOT5.1"
+        dry_boiling_point: ">= 260°C"
+    0w20_sn:
+      title: "Iris Engine Oil 0W-20 SN"
+      desc: "Fuel-efficient fully synthetic engine oil for new vehicles."
+      apps:
+        - "New Passenger Cars"
+        - "Hybrid/Turbo Engines"
+      specs:
+        viscosity: "0W-20"
+        api_level: "SN"
+        base_oil: "Fully Synthetic"
+    5w40_sm:
+      title: "Iris Engine Oil 5W-40 SM"
+      desc: "Semi-synthetic oil with high performance in various temperatures."
+      apps:
+        - "Passenger Cars"
+        - "Light Gasoline/Diesel Engines"
+      specs:
+        viscosity: "5W-40"
+        api_level: "SM"
+        base_oil: "Semi-Synthetic"
+    ep1:
+      title: "Iris Industrial Grease EP1"
+      desc: "Industrial grease for bearings and moving parts, resistant to high pressure and temperature."
+      apps:
+        - "Bearings"
+        - "Moving Industrial Parts"
+        - "Gears"
+      specs:
+        nlgi_grade: "1"
+        dropping_point: ">= 180°C"
+        water_resistance: "High"
+    ep2:
+      title: "Iris Industrial Grease EP2"
+      desc: "Multi-purpose grease with anti-wear properties and oxidation resistance."
+      apps:
+        - "Ball Bearings"
+        - "Heavy Duty Bearings"
+        - "Manufacturing Machinery"
+      specs:
+        nlgi_grade: "2"
+        dropping_point: ">= 190°C"
+        water_resistance: "Very High"
+    ep3:
+      title: "Iris Industrial Grease EP3"
+      desc: "Grease resistant to pressure and moisture for heavy industries."
+      apps:
+        - "Industrial Parts"
+        - "Construction Machinery"
+        - "Presses"
+      specs:
+        nlgi_grade: "3"
+        dropping_point: ">= 200°C"
+        water_resistance: "High"
+    ep0:
+      title: "Iris Industrial Grease EP0"
+      desc: "Light grease for initial lubrication and light equipment."
+      apps:
+        - "Small Gears"
+        - "Light Bearings"
+        - "Industrial Hand Tools"
+      specs:
+        nlgi_grade: "0"
+        dropping_point: ">= 160°C"
+        water_resistance: "Medium"
+    ep4:
+      title: "Iris Industrial Grease EP4"
+      desc: "Heat and pressure resistant grease for heavy industrial machinery."
+      apps:
+        - "Mining Machinery"
+        - "Heavy Equipment"
+        - "Large Gears"
+      specs:
+        nlgi_grade: "4"
+        dropping_point: ">= 210°C"
+        water_resistance: "High"
+    cnc_coolant:
+      title: "Iris CNC Coolant"
+      desc: "Industrial coolant with cooling and lubricating properties for machining and metalworking."
+      apps:
+        - "CNC Machines"
+        - "Lathes"
+        - "Milling Machines"
+      specs:
+        mixing_ratio: "5% - 10%"
+        corrosion_protection: "Excellent"
+    premium_coolant:
+      title: "Iris Premium Coolant"
+      desc: "Coolant with high cooling power and corrosion protection."
+      apps:
+        - "Lathes"
+        - "Metal Cutting"
+        - "Industrial CNC"
+      specs:
+        mixing_ratio: "4% - 8%"
+        corrosion_protection: "Very Good"
+    heavy_duty_coolant:
+      title: "Iris Heavy Duty Coolant"
+      desc: "Suitable for heavy machining operations with long durability."
+      apps:
+        - "Heavy Turning"
+        - "Hard Metal Milling"
+        - "Metal Industries"
+      specs:
+        mixing_ratio: "6% - 12%"
+        corrosion_protection: "Excellent"
+    coolmax:
+      title: "Iris CoolMax Coolant"
+      desc: "Fast cooling performance for precision equipment."
+      apps:
+        - "CNC Machines"
+        - "Precision Tools"
+        - "Light Metal Industries"
+      specs:
+        mixing_ratio: "5% - 9%"
+        corrosion_protection: "Good"
+    eco_coolant:
+      title: "Iris Eco Coolant"
+      desc: "Eco-friendly product with suitable lubrication and cooling."
+      apps:
+        - "Light Machinery"
+        - "Small Metal Works"
+        - "Educational CNC"
+      specs:
+        mixing_ratio: "3% - 7%"
+        corrosion_protection: "Good"
+    long_life_antifreeze:
+      title: "Iris Long Life Antifreeze"
+      desc: "Long life antifreeze for complete protection of vehicle cooling systems in winter."
+      apps:
+        - "Vehicle Cooling Systems"
+        - "Industrial Engines"
+      specs:
+        type: "OAT"
+        color: "Red"
+        freezing_point: "-37°C"
+        lifespan: "5 Years"
+    ultra_pure_radiator_water:
+      title: "Iris Ultra Pure Radiator Water"
+      desc: "Ultra pure water for car and industrial engine cooling systems."
+      apps:
+        - "Car Radiators"
+        - "Industrial Radiators"
+      specs:
+        purity: "99.9%"
+        electrical_conductivity: "< 5 µS/cm"
+    battery_water:
+      title: "Iris Battery Water"
+      desc: "High purity water for charging and maintaining acid batteries."
+      apps:
+        - "Car Batteries"
+        - "Industrial Batteries"
+      specs:
+        purity: "99.9%"
+        ph: "7 ± 0.2"
+    red_cool_antifreeze:
+      title: "Iris Red Cool Antifreeze"
+      desc: "Long-lasting antifreeze for passenger and heavy-duty vehicles."
+      apps:
+        - "Car Cooling Systems"
+        - "Industrial Machinery"
+      specs:
+        type: "OAT"
+        color: "Red"
+        freezing_point: "-35°C"
+        lifespan: "4 Years"
+    standard_radiator_water:
+      title: "Iris Standard Radiator Water"
+      desc: "Standard water for car radiators and industrial equipment."
+      apps:
+        - "Car Radiators"
+        - "Industrial Radiators"
+      specs:
+        purity: "99.5%"
+        electrical_conductivity: "< 10 µS/cm"
+
