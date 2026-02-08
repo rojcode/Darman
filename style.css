@@ -1,5 +1,5 @@
-/* Import Vazirmatn Font from Google Fonts for Persian text */
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+/* Import Vazirmatn Font from local static files */
+@import url('static/css/vazirmatn.css');
 
 :root {
     /* Fluent UI Color Palette */
@@ -303,6 +303,7 @@ header .container {
 
 /* Hero Heading */
 .hero h1 {
+    font-family: 'Vazirmatn', sans-serif;
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 24px;
