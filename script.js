@@ -64,6 +64,14 @@ function loadLanguage(lang) {
             badge.textContent = getValue("download_app.badge");
             el.appendChild(badge);
           }
+        } else if (el.classList.contains("nav-zagai-link")) {
+          // Preserve the coming-soon badge span while updating text
+          const badge = el.querySelector(".nav-badge-soon");
+          el.textContent = value;
+          if (badge) {
+            badge.textContent = getValue("zagai.nav_badge");
+            el.appendChild(badge);
+          }
         } else {
           el.textContent = value;
         }

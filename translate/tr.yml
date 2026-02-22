@@ -126,6 +126,22 @@ download_app:
     - "Bilgilere çevrimdışı erişim"
     - "Satış ekibiyle doğrudan iletişim"
     - "Son fiyat güncellemeleri"
+zagai:
+  badge: "Yapay Zeka"
+  nav_title: "ZagAI"
+  nav_badge: "Yakında"
+  title: "ZagAI — Darman'ın Yapay Zekası"
+  subtitle: "ZagAI akıllı asistanı, fabrika çalışanlarının tüm süreçlere kapsamlı bir bakış açısı kazanmalarına, içerik oluşturmalarına, satış danışmanlığı almalarına ve yönetim toplantılarında akıllı analizlerden yararlanmalarına yardımcı olur."
+  tagline: "Yağlama Endüstrisinin Akıllı Geleceği"
+  features:
+    - title: "Kapsamlı Süreç İzleme"
+      desc: "Tüm üretim hatları, depolama ve tedarik zincirinin gerçek zamanlı 360 derece görünümü"
+    - title: "İçerik Üretimi"
+      desc: "Ürünler için raporların, teknik belgelerin ve pazarlama içeriğinin otomatik oluşturulması"
+    - title: "Akıllı Satış Danışmanlığı"
+      desc: "Satış temsilcilerine kişiselleştirilmiş öneriler, pazar analizi ve optimum fiyatlandırma ile rehberlik"
+    - title: "Yönetim Toplantısı Analisti"
+      desc: "Karar verme için analitik panolar, trend tahmini ve akıllı veri özetleri sunma"
 cta:
   title: "İşbirliği veya toplu satın alma için bizimle iletişime geçin"
   subtitle: "Satış ve teknik destek ekibimiz sorularınızı yanıtlamaya ve uzman danışmanlık sunmaya hazırdır."

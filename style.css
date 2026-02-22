@@ -145,6 +145,10 @@ header .container {
     position: relative;
 }
 
+.nav-zagai-link {
+    position: relative;
+}
+
 .nav-badge-new {
     position: absolute;
     top: -6px;
@@ -165,6 +169,23 @@ header .container {
 @keyframes badge-pulse {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.15); }
+}
+
+.nav-badge-soon {
+    position: absolute;
+    top: -6px;
+    inset-inline-end: -8px;
+    background: linear-gradient(135deg, #8a2be2, #a855f7);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 5px;
+    border-radius: 6px;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    animation: badge-pulse 2s ease-in-out infinite;
+    box-shadow: 0 2px 6px rgba(138, 43, 226, 0.4);
+    pointer-events: none;
 }
 
 /* Logo Image Styling */
@@ -2989,6 +3010,498 @@ footer {
 
     .download-visual {
         order: -1;
+    }
+}
+
+/* =============================================
+   ZagAI Section
+   ============================================= */
+.zagai {
+    background: linear-gradient(160deg, #06091a 0%, #0d1b3e 40%, #0a1628 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.zagai-orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(80px);
+}
+
+.zagai-orb-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.12) 0%, transparent 70%);
+    top: -15%;
+    right: -10%;
+    animation: zagaiOrb1 12s ease-in-out infinite;
+}
+
+.zagai-orb-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 200, 255, 0.08) 0%, transparent 70%);
+    bottom: -10%;
+    left: -8%;
+    animation: zagaiOrb2 15s ease-in-out infinite;
+}
+
+.zagai-orb-3 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.06) 0%, transparent 70%);
+    top: 50%;
+    left: 40%;
+    animation: zagaiOrb1 10s ease-in-out infinite reverse;
+}
+
+@keyframes zagaiOrb1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-30px, 20px) scale(1.1); }
+}
+
+@keyframes zagaiOrb2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(25px, -15px) scale(1.05); }
+}
+
+.zagai h2 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 18px;
+    line-height: 1.4;
+}
+
+.zagai h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    inset-inline-start: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #8a2be2, #00c8ff);
+    border-radius: var(--radius-small);
+}
+
+.zagai-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.zagai-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background: rgba(138, 43, 226, 0.15);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    border-radius: 50px;
+    color: #c084fc;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    backdrop-filter: blur(10px);
+}
+
+.zagai-badge i {
+    font-size: 0.8rem;
+}
+
+.zagai-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.9;
+    margin-bottom: 36px;
+}
+
+.zagai-features {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.zagai-feature-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    transition: all 0.35s cubic-bezier(0.1, 0.9, 0.2, 1);
+    backdrop-filter: blur(8px);
+}
+
+.zagai-feature-card:hover {
+    background: rgba(138, 43, 226, 0.08);
+    border-color: rgba(138, 43, 226, 0.25);
+    transform: translateX(-6px);
+    box-shadow: 0 8px 30px rgba(138, 43, 226, 0.12);
+}
+
+[dir="ltr"] .zagai-feature-card:hover {
+    transform: translateX(6px);
+}
+
+.zagai-feature-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(0, 200, 255, 0.15));
+    color: #c084fc;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.zagai-feature-card:hover .zagai-feature-icon {
+    background: linear-gradient(135deg, #8a2be2, #00c8ff);
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+.zagai-feature-text h4 {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.zagai-feature-text p {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+}
+
+/* ZagAI Brain Visual */
+.zagai-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.zagai-brain {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zagai-brain-core {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8a2be2, #6a1bb5);
+    box-shadow:
+        0 0 40px rgba(138, 43, 226, 0.4),
+        0 0 80px rgba(138, 43, 226, 0.15),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    z-index: 3;
+    animation: coreGlow 3s ease-in-out infinite;
+}
+
+.zagai-brain-core i {
+    font-size: 2.4rem;
+    color: #ffffff;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+@keyframes coreGlow {
+    0%, 100% {
+        box-shadow:
+            0 0 40px rgba(138, 43, 226, 0.4),
+            0 0 80px rgba(138, 43, 226, 0.15);
+    }
+    50% {
+        box-shadow:
+            0 0 50px rgba(138, 43, 226, 0.6),
+            0 0 100px rgba(138, 43, 226, 0.25),
+            0 0 140px rgba(138, 43, 226, 0.08);
+    }
+}
+
+.zagai-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1.5px solid transparent;
+}
+
+.zagai-ring-1 {
+    width: 160px;
+    height: 160px;
+    border-color: rgba(138, 43, 226, 0.25);
+    animation: ringRotate 8s linear infinite;
+    border-top-color: rgba(0, 200, 255, 0.5);
+}
+
+.zagai-ring-2 {
+    width: 220px;
+    height: 220px;
+    border-color: rgba(0, 200, 255, 0.12);
+    animation: ringRotate 12s linear infinite reverse;
+    border-bottom-color: rgba(138, 43, 226, 0.4);
+}
+
+.zagai-ring-3 {
+    width: 280px;
+    height: 280px;
+    border-color: rgba(138, 43, 226, 0.08);
+    animation: ringRotate 18s linear infinite;
+    border-left-color: rgba(0, 200, 255, 0.2);
+}
+
+@keyframes ringRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.zagai-node {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(13, 27, 62, 0.9);
+    border: 1.5px solid rgba(138, 43, 226, 0.3);
+    color: #c084fc;
+    font-size: 0.85rem;
+    z-index: 4;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    animation: nodeFloat 4s ease-in-out infinite;
+}
+
+.zagai-node-1 {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 0s;
+}
+
+.zagai-node-2 {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-delay: 1s;
+}
+
+.zagai-node-3 {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 2s;
+}
+
+.zagai-node-4 {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-delay: 3s;
+}
+
+@keyframes nodeFloat {
+    0%, 100% { filter: brightness(1); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); }
+    50% { filter: brightness(1.3); box-shadow: 0 4px 20px rgba(138, 43, 226, 0.3); }
+}
+
+.zagai-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(138, 43, 226, 0.6);
+    z-index: 2;
+}
+
+.zagai-particle-1 {
+    top: 25%;
+    left: 20%;
+    animation: particleDrift 6s ease-in-out infinite;
+}
+
+.zagai-particle-2 {
+    top: 15%;
+    right: 25%;
+    width: 3px;
+    height: 3px;
+    background: rgba(0, 200, 255, 0.5);
+    animation: particleDrift 8s ease-in-out infinite reverse;
+}
+
+.zagai-particle-3 {
+    bottom: 20%;
+    right: 15%;
+    animation: particleDrift 7s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.zagai-particle-4 {
+    bottom: 30%;
+    left: 15%;
+    width: 3px;
+    height: 3px;
+    background: rgba(0, 200, 255, 0.4);
+    animation: particleDrift 9s ease-in-out infinite reverse;
+}
+
+.zagai-particle-5 {
+    top: 40%;
+    left: 10%;
+    width: 2px;
+    height: 2px;
+    animation: particleDrift 5s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.zagai-particle-6 {
+    top: 60%;
+    right: 10%;
+    width: 2px;
+    height: 2px;
+    background: rgba(0, 200, 255, 0.3);
+    animation: particleDrift 7s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+@keyframes particleDrift {
+    0%, 100% { transform: translate(0, 0); opacity: 0.4; }
+    25% { transform: translate(8px, -12px); opacity: 1; }
+    50% { transform: translate(-5px, 6px); opacity: 0.6; }
+    75% { transform: translate(10px, 8px); opacity: 0.9; }
+}
+
+.zagai-brand {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #8a2be2, #c084fc, #00c8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.zagai-tagline {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* ZagAI Responsive */
+@media (max-width: 768px) {
+    .zagai-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .zagai h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .zagai h2::after {
+        inset-inline-start: 50%;
+        transform: translateX(-50%);
+    }
+
+    .zagai-badge {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        width: fit-content;
+    }
+
+    .zagai-subtitle {
+        text-align: center;
+    }
+
+    .zagai-feature-card:hover {
+        transform: none;
+    }
+
+    .zagai-visual {
+        order: -1;
+    }
+
+    .zagai-brain {
+        width: 240px;
+        height: 240px;
+    }
+
+    .zagai-brain-core {
+        width: 80px;
+        height: 80px;
+    }
+
+    .zagai-brain-core i {
+        font-size: 1.8rem;
+    }
+
+    .zagai-ring-1 { width: 130px; height: 130px; }
+    .zagai-ring-2 { width: 180px; height: 180px; }
+    .zagai-ring-3 { width: 230px; height: 230px; }
+
+    .zagai-brand {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .zagai {
+        padding: 70px 0;
+    }
+
+    .zagai-brain {
+        width: 200px;
+        height: 200px;
+    }
+
+    .zagai-brain-core {
+        width: 65px;
+        height: 65px;
+    }
+
+    .zagai-ring-1 { width: 110px; height: 110px; }
+    .zagai-ring-2 { width: 150px; height: 150px; }
+    .zagai-ring-3 { width: 190px; height: 190px; }
+
+    .zagai-node {
+        width: 32px;
+        height: 32px;
+        font-size: 0.7rem;
+    }
+
+    .zagai-brand {
+        font-size: 1.8rem;
+        letter-spacing: 4px;
     }
 }
 

@@ -126,6 +126,22 @@ download_app:
     - "Offline access to information"
     - "Direct contact with sales team"
     - "Latest price updates"
+zagai:
+  badge: "Artificial Intelligence"
+  nav_title: "ZagAI"
+  nav_badge: "Soon"
+  title: "ZagAI — Darman's Artificial Intelligence"
+  subtitle: "The ZagAI smart assistant helps factory employees gain a comprehensive overview of all processes, create content, receive sales consulting, and benefit from intelligent analysis in management meetings."
+  tagline: "The Smart Future of Lubricant Industry"
+  features:
+    - title: "Comprehensive Process Monitoring"
+      desc: "360-degree view of all production lines, warehousing, and supply chain in real-time"
+    - title: "Content Generation"
+      desc: "Automatic creation of reports, technical documentation, and marketing content for products"
+    - title: "Smart Sales Consulting"
+      desc: "Guiding sales representatives with personalized suggestions, market analysis, and optimal pricing"
+    - title: "Management Meeting Analyst"
+      desc: "Providing analytical dashboards, trend forecasting, and intelligent data summaries for decision-making"
 cta:
   title: "Contact us for cooperation or bulk purchase"
   subtitle: "Our sales and technical support team is ready to answer your questions and provide expert consultation."
