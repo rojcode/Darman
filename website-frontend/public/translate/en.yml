@@ -2,6 +2,8 @@ title: "Darman Ravankar Pars - Specialized Lubricant Manufacturer"
 description: "Specialized manufacturer of industrial and automotive lubricants in Kermanshah, Iran"
 header:
   logo_alt: "Darman Ravankar Pars Logo"
+nav:
+  products: "View Products"
 hero:
   typewriter: "Darman Ravankar Pars | Specialized Lubricant Manufacturer"
   subtitle: "Production of industrial and automotive oils with modern standards"
@@ -102,6 +104,8 @@ faq:
       answer: "Darman Ravankar Pars offers sustainable quality, advanced quality control, competitive prices and specialized technical support, making it a reliable option for customers and agencies."
 mission:
   title: "Mission and Vision"
+  mission_title: "Our Mission"
+  vision_title: "Our Vision"
   mission: "Our mission is to produce high-quality and sustainable lubricants that ensure optimal performance, safety and longevity of industrial equipment and vehicles. Darman Ravankar Pars always moves towards providing reliable and effective products by focusing on innovation, international standards and real customer needs."
   vision: "Darman Ravankar Pars vision is to become the main reference for the production of industrial and automotive lubricants in Iran and to upgrade the quality standards of the lubricant industry. We seek to create sustainable trust in customers, optimize operational costs and improve the performance of machinery and vehicles so that every product of ours represents the commitment, expertise and innovation of the Darman brand."
 about_llm:
@@ -124,6 +128,7 @@ download_app:
     - "Latest price updates"
 cta:
   title: "Contact us for cooperation or bulk purchase"
+  subtitle: "Our sales and technical support team is ready to answer your questions and provide expert consultation."
   button: "Contact Us"
 footer:
   company: "Darman Ravankar Pars"

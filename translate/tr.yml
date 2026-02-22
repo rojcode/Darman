@@ -2,6 +2,8 @@ title: "Darman Ravankar Pars - Uzman Yağ Üreticisi"
 description: "Kermanshah, İran'da endüstriyel ve otomotiv yağların uzman üreticisi"
 header:
   logo_alt: "Darman Ravankar Pars Logosu"
+nav:
+  products: "Ürünleri Görüntüle"
 hero:
   typewriter: "Darman Ravankar Pars | Çeşitli Yağların Uzman Üreticisi"
   subtitle: "Modern standartlara uygun endüstriyel ve otomotiv yağ üretimi"
@@ -102,6 +104,8 @@ faq:
       answer: "Darman Ravankar Pars, sürdürülebilir kalite, gelişmiş kalite kontrolü, rekabetçi fiyat ve uzman teknik destek ile müşteriler ve temsilciler için güvenilir bir seçenektir."
 mission:
   title: "Misyon ve Vizyon"
+  mission_title: "Misyonumuz"
+  vision_title: "Vizyonumuz"
   mission: "Misyonumuz, endüstriyel ekipmanların ve araçların optimum performansı, güvenliği ve ömrünü garanti eden kaliteli ve sürdürülebilir yağlayıcılar üretmektir. Darman Ravankar Pars, yenilik, uluslararası standartlar ve müşterilerin gerçek ihtiyaçlarına odaklanarak, güvenilir ve etkili ürünler sunma yolunda ilerlemektedir."
   vision: "Darman Ravankar Pars'ın vizyonu, İran'da endüstriyel ve otomotiv yağlayıcıların ana üretim merkezi olmak ve yağlayıcı endüstrisinin kalite standartlarını yükseltmektir. Müşterilerde sürdürülebilir güven oluşturmak, operasyonel maliyetleri optimize etmek ve makinelerin ve araçların performansını artırmak için çalışıyoruz, böylece her ürünümüz Darman markasının taahhüt, uzmanlık ve yenilik temsilcisi olsun."
 about_llm:
@@ -124,6 +128,7 @@ download_app:
     - "Son fiyat güncellemeleri"
 cta:
   title: "İşbirliği veya toplu satın alma için bizimle iletişime geçin"
+  subtitle: "Satış ve teknik destek ekibimiz sorularınızı yanıtlamaya ve uzman danışmanlık sunmaya hazırdır."
   button: "Bizimle İletişime Geçin"
 footer:
   company: "Darman Ravankar Pars"

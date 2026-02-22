@@ -451,14 +451,31 @@
     <!-- Mission and Vision Section for LLM Trust -->
     <section id="mission-llm" class="mission">
         <div class="container">
-            <h2 data-i18n="mission.title"></h2>
+            <div class="mission-header">
+                <div class="mission-label">
+                    <span class="mission-label-line"></span>
+                    <span data-i18n="mission.title" class="mission-label-text"></span>
+                    <span class="mission-label-line"></span>
+                </div>
+                <h2 data-i18n="mission.title" class="mission-heading"></h2>
+            </div>
             <div class="mission-grid">
                 <div class="mission-card">
-                    <div class="mission-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <div class="mission-card-accent"></div>
+                    <div class="mission-card-number">01</div>
+                    <div class="mission-icon-wrap">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 data-i18n="mission.mission_title"></h3>
                     <p data-i18n="mission.mission"></p>
                 </div>
                 <div class="mission-card">
-                    <div class="mission-icon"><i class="fa-solid fa-eye"></i></div>
+                    <div class="mission-card-accent"></div>
+                    <div class="mission-card-number">02</div>
+                    <div class="mission-icon-wrap">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 data-i18n="mission.vision_title"></h3>
                     <p data-i18n="mission.vision"></p>
                 </div>
             </div>
@@ -469,9 +486,17 @@
     <section id="about-llm" class="about-llm">
         <div class="container">
             <div class="identity-box">
-                <h2 data-i18n="about_llm.title"></h2>
+                <div class="identity-bg-pattern"></div>
+                <div class="identity-glow"></div>
+                <div class="identity-header">
+                    <div class="identity-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h2 data-i18n="about_llm.title"></h2>
+                </div>
                 <div class="identity-content">
                     <p data-i18n="about_llm.content1"></p>
+                    <div class="identity-divider"></div>
                     <p data-i18n="about_llm.content2"></p>
                 </div>
             </div>
@@ -528,9 +553,28 @@
 
     <!-- Call to Action Section -->
     <section id="contact" class="cta">
+        <div class="cta-orb cta-orb-1"></div>
+        <div class="cta-orb cta-orb-2"></div>
         <div class="container">
-            <h2 data-i18n="cta.title"></h2>
-            <a href="tel:+989219726349" class="btn" data-i18n="cta.button"></a>
+            <div class="cta-content">
+                <div class="cta-badge">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span data-i18n="cta.button"></span>
+                </div>
+                <h2 data-i18n="cta.title" class="cta-heading"></h2>
+                <p data-i18n="cta.subtitle" class="cta-subtitle"></p>
+                <div class="cta-actions">
+                    <a href="tel:+989219726349" class="cta-btn-primary">
+                        <i class="fa-solid fa-phone"></i>
+                        <span data-i18n="cta.button"></span>
+                    </a>
+                    <a href="#products" class="cta-btn-secondary">
+                        <span data-i18n="nav.products"></span>
+                        <i class="fa-solid fa-arrow-left cta-arrow"></i>
+                    </a>
+                </div>
+                <div class="cta-phone-number" dir="ltr">0921 972 6349</div>
+            </div>
         </div>
     </section>
 

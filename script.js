@@ -306,21 +306,24 @@ document.querySelectorAll(".faq-question").forEach((question) => {
 });
 
 // Staggered entrance for FAQ items
-const faqObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const items = entry.target.querySelectorAll('.faq-item');
-      items.forEach((item, index) => {
-        setTimeout(() => {
-          item.classList.add('visible');
-        }, index * 150);
-      });
-      faqObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15 });
+const faqObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const items = entry.target.querySelectorAll(".faq-item");
+        items.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add("visible");
+          }, index * 150);
+        });
+        faqObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15 },
+);
 
-const faqAccordion = document.querySelector('.faq-accordion');
+const faqAccordion = document.querySelector(".faq-accordion");
 if (faqAccordion) {
   faqObserver.observe(faqAccordion);
 }
