@@ -290,7 +290,7 @@ if (hamburgerBtn && mainNav) {
 // FAQ Accordion Logic
 document.querySelectorAll(".faq-question").forEach((question) => {
   question.addEventListener("click", () => {
-    const item = question.parentElement;
+    const item = question.closest(".faq-item");
     const isActive = item.classList.contains("active");
 
     // Close all other items
@@ -304,6 +304,26 @@ document.querySelectorAll(".faq-question").forEach((question) => {
     }
   });
 });
+
+// Staggered entrance for FAQ items
+const faqObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const items = entry.target.querySelectorAll('.faq-item');
+      items.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add('visible');
+        }, index * 150);
+      });
+      faqObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+const faqAccordion = document.querySelector('.faq-accordion');
+if (faqAccordion) {
+  faqObserver.observe(faqAccordion);
+}
 
 // Render Products dynamically based on translation data
 function renderProducts(data) {
