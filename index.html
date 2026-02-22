@@ -38,8 +38,8 @@
                     <a href="#location" data-i18n="location.title"></a>
                     <a href="#download-app" class="nav-download-link" data-i18n="download_app.title"><span
                             class="nav-badge-new" data-i18n="download_app.badge">NEW</span></a>
-                    <a href="#zagai" class="nav-zagai-link" data-i18n="zagai.nav_title"><span
-                            class="nav-badge-soon" data-i18n="zagai.nav_badge"></span></a>
+                    <a href="#zagai" class="nav-zagai-link" data-i18n="zagai.nav_title"><span class="nav-badge-soon"
+                            data-i18n="zagai.nav_badge"></span></a>
                     <a href="#contact" data-i18n="cta.button"></a>
                 </nav>
             </div>
@@ -68,6 +68,10 @@
                         <a href="#" data-lang="ru">
                             <img src="static/images/flags/Flag_of_Russia.svg.webp" alt="Russian Flag" class="flag-icon">
                             Русский
+                        </a>
+                        <a href="#" data-lang="ur">
+                            <img src="static/images/flags/Flag_of_Pakistan.svg.png" alt="Urdu Flag" class="flag-icon">
+                            اردو
                         </a>
                     </div>
                 </div>
@@ -712,7 +716,23 @@
     </footer>
 
     <!-- Floating Scroll to Top Button -->
-    <button id="scroll-to-top" class="scroll-to-top" title="Scroll to Top">↑</button>
+    <button id="scroll-to-top" class="scroll-to-top" title="Scroll to Top">
+        <span class="stt-glow"></span>
+        <span class="stt-ring"></span>
+        <span class="stt-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19V5" />
+                <path d="M5 12l7-7 7 7" />
+            </svg>
+        </span>
+        <span class="stt-particle stt-p1"></span>
+        <span class="stt-particle stt-p2"></span>
+        <span class="stt-particle stt-p3"></span>
+        <span class="stt-particle stt-p4"></span>
+        <span class="stt-particle stt-p5"></span>
+        <span class="stt-particle stt-p6"></span>
+    </button>
 
     <!-- YAML parsing library -->
     <script src="static/js/js-yaml.min.js"></script>

@@ -13,6 +13,7 @@ function loadLanguage(lang) {
     arabic: "ar",
     turkish: "tr",
     russian: "ru",
+    urdu: "ur",
   };
   if (langMap[lang]) {
     lang = langMap[lang];
@@ -97,7 +98,7 @@ function loadLanguage(lang) {
       }
 
       // Update HTML attributes and direction
-      const isRTL = lang === "fa" || lang === "ar";
+      const isRTL = lang === "fa" || lang === "ar" || lang === "ur";
       document.body.style.direction = isRTL ? "rtl" : "ltr";
       document.documentElement.lang = lang;
 
