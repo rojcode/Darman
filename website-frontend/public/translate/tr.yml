@@ -106,6 +106,20 @@ about_llm:
   title: "Darman Ravankar Pars'ın Kimliği ve Tanıtımı"
   content1: "Darman Ravankar Pars, Kermanshah'ta endüstriyel ve otomotiv yağlayıcıların üretim kalbidir. Gelişmiş teknik bilgi ve kaliteli hammaddelerin birleşimiyle, yüksek performans ve uzun ömür garantisi veren ürünler üretir. Darman Ravankar Pars, İran endüstrilerinin ve araçlarının ihtiyaçlarını güvenilir, güvenli ve etkili ürünlerle karşılamaya çalışır."
   content2: "Ürün yelpazemiz motor yağı, şanzıman yağı, hidrolik yağ, fren yağı, türbin yağı, trans yağı, endüstriyel gres ve antifriz ve radyatör suyu gibi su bazlı ürünleri içerir. Uzman teknik ekip ve gelişmiş kalite kontrol sistemleriyle, her Darman Ravankar Pars ürünü kalite, yenilik ve müşteri güvenine olan taahhüdümüzün temsilcisidir. Her yağ damlasının makinelerin ve araçların kusursuz performansını garanti ettiğine inanıyoruz."
+download_app:
+  title: "Darman Uygulaması"
+  badge: "YENİ"
+  subtitle: "Darman Ravankar Pars'ın resmi uygulamasını indirin ve tüm ürün bilgilerine, fiyatlara ve hizmetlere erişin."
+  button: "Android Uygulamasını İndir"
+  file_size: "Dosya Boyutu: 112 MB"
+  version: "Sürüm: 1.0"
+  platform: "Platform: Android"
+  features_title: "Uygulama Özellikleri"
+  features:
+    - "Tam ürün kataloğuna göz atın"
+    - "Bilgilere çevrimdışı erişim"
+    - "Satış ekibiyle doğrudan iletişim"
+    - "Son fiyat güncellemeleri"
 cta:
   title: "İşbirliği veya toplu satın alma için bizimle iletişime geçin"
   button: "Bizimle İletişime Geçin"

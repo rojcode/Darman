@@ -56,6 +56,14 @@ function loadLanguage(lang) {
           el.setAttribute("content", value);
         } else if (el.tagName === "IMG") {
           el.setAttribute("alt", value);
+        } else if (el.classList.contains("nav-download-link")) {
+          // Preserve the NEW badge span while updating text
+          const badge = el.querySelector(".nav-badge-new");
+          el.textContent = value;
+          if (badge) {
+            badge.textContent = getValue("download_app.badge");
+            el.appendChild(badge);
+          }
         } else {
           el.textContent = value;
         }
