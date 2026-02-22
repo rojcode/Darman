@@ -18,8 +18,10 @@ about:
     - "Located in Kermanshah, Iran's industrial heart"
 location:
   title: "Factory Location"
-  content: "Darman Ravankar Pars factory is located in Kermanshah, Iran."
+  content: "Darman Ravankar Pars factory is located in Zagros Industrial Park, Bisotun Road, Kermanshah, Iran."
   interact_btn: "Click to interact with map"
+  hours_label: "Working Hours:"
+  hours_value: "Saturday to Thursday, 8 AM - 5 PM"
 products:
   title: "Our Products"
   categories:
@@ -125,7 +127,7 @@ cta:
   button: "Contact Us"
 footer:
   company: "Darman Ravankar Pars"
-  location: "Location: Kermanshah, Iran"
+  location: "Address: Kermanshah, Bisotun Road, Zagros Industrial Park, Kargar St. 2"
   phone_label: "Phone:"
   phone_number: "0921 972 6349"
   copyright: "Darman Ravankar Pars. All rights reserved."

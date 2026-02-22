@@ -92,13 +92,39 @@
             </svg>
         </div>
 
+        <!-- Floating Orbs -->
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+
         <div class="container">
             <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-oil-can"></i>
+                    <span data-i18n="about.features.0"></span>
+                </div>
                 <h1 id="typewriter" data-i18n="hero.typewriter"></h1>
                 <p data-i18n="hero.subtitle"></p>
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-hero-primary" data-i18n="hero.buttons.0"></a>
-                    <a href="#contact" class="btn btn-hero-secondary" data-i18n="hero.buttons.1"></a>
+                    <a href="#contact" class="btn btn-hero-secondary" data-i18n="hero.buttons.1">
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">+50</span>
+                        <span class="hero-stat-label" data-i18n="products.title"></span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">5</span>
+                        <span class="hero-stat-label" data-i18n="products.categories.industrial_oils.title"></span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">ISO</span>
+                        <span class="hero-stat-label" data-i18n="about.features.1"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -107,27 +133,50 @@
     <!-- About Section: Factory Introduction -->
     <section id="about" class="about">
         <div class="container">
+            <div class="about-header">
+                <div class="about-label">
+                    <span class="about-label-line"></span>
+                    <span data-i18n="about.title" class="about-label-text"></span>
+                    <span class="about-label-line"></span>
+                </div>
+                <h2 data-i18n="about.title" class="about-heading"></h2>
+            </div>
             <div class="about-grid">
                 <div class="about-main">
-                    <h2 data-i18n="about.title"></h2>
                     <p data-i18n="about.content" class="about-description"></p>
+                    <div class="about-highlight">
+                        <div class="about-highlight-icon"><i class="fa-solid fa-quote-right"></i></div>
+                        <p data-i18n="brand_intro.content" class="about-highlight-text"></p>
+                    </div>
                 </div>
                 <div class="about-features">
                     <div class="feature-card">
-                        <div class="feature-icon"><i class="fa-solid fa-industry"></i></div>
-                        <p data-i18n="about.features.0"></p>
+                        <div class="feature-number">01</div>
+                        <div class="feature-content">
+                            <div class="feature-icon"><i class="fa-solid fa-industry"></i></div>
+                            <p data-i18n="about.features.0"></p>
+                        </div>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                        <p data-i18n="about.features.1"></p>
+                        <div class="feature-number">02</div>
+                        <div class="feature-content">
+                            <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <p data-i18n="about.features.1"></p>
+                        </div>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon"><i class="fa-solid fa-gears"></i></div>
-                        <p data-i18n="about.features.2"></p>
+                        <div class="feature-number">03</div>
+                        <div class="feature-content">
+                            <div class="feature-icon"><i class="fa-solid fa-gears"></i></div>
+                            <p data-i18n="about.features.2"></p>
+                        </div>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon"><i class="fa-solid fa-location-dot"></i></div>
-                        <p data-i18n="about.features.3"></p>
+                        <div class="feature-number">04</div>
+                        <div class="feature-content">
+                            <div class="feature-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <p data-i18n="about.features.3"></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -137,22 +186,42 @@
     <!-- Location Section with Embedded Map -->
     <section id="location" class="location">
         <div class="container">
-            <h2 data-i18n="location.title"></h2>
+            <div class="location-header">
+                <div class="location-label">
+                    <span class="location-label-line"></span>
+                    <span data-i18n="location.title" class="location-label-text"></span>
+                    <span class="location-label-line"></span>
+                </div>
+                <h2 data-i18n="location.title" class="location-heading"></h2>
+            </div>
             <div class="location-grid">
                 <div class="location-info">
                     <p data-i18n="location.content" class="location-desc"></p>
-                    <div class="contact-card">
-                        <div class="contact-item">
-                            <i class="fa-solid fa-phone"></i>
-                            <div>
-                                <span data-i18n="footer.phone_label"></span>
+                    <div class="location-cards">
+                        <div class="location-card">
+                            <div class="location-card-icon">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div class="location-card-content">
+                                <span class="location-card-label" data-i18n="footer.location"></span>
+                            </div>
+                        </div>
+                        <div class="location-card">
+                            <div class="location-card-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="location-card-content">
+                                <span class="location-card-label" data-i18n="footer.phone_label"></span>
                                 <strong dir="ltr" data-i18n="footer.phone_number"></strong>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fa-solid fa-map-location-dot"></i>
-                            <div>
-                                <span data-i18n="footer.location"></span>
+                        <div class="location-card">
+                            <div class="location-card-icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div class="location-card-content">
+                                <span class="location-card-label" data-i18n="location.hours_label"></span>
+                                <strong data-i18n="location.hours_value"></strong>
                             </div>
                         </div>
                     </div>
@@ -160,10 +229,13 @@
                 <!-- Map Container with Interaction Overlay -->
                 <div class="map-wrapper">
                     <div class="map-overlay" id="map-overlay">
-                        <button class="btn btn-primary" data-i18n="location.interact_btn"></button>
+                        <div class="map-overlay-content">
+                            <i class="fa-solid fa-map-pin map-overlay-icon"></i>
+                            <button class="btn btn-primary" data-i18n="location.interact_btn"></button>
+                        </div>
                     </div>
                     <iframe id="factory-map"
-                        src="https://www.openstreetmap.org/export/embed.html?bbox=47.25,34.3,47.28,34.35&layer=mapnik&marker=34.320576,47.267728"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=47.22,34.31,47.26,34.34&layer=mapnik&marker=34.325,47.240"
                         width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
@@ -173,61 +245,71 @@
     <!-- Products Section: Categorized Product Cards -->
     <section id="products" class="products">
         <div class="container">
-            <h2 data-i18n="products.title"></h2>
+            <div class="products-header">
+                <div class="products-label">
+                    <span class="products-label-line"></span>
+                    <span data-i18n="products.title" class="products-label-text"></span>
+                    <span class="products-label-line"></span>
+                </div>
+                <h2 data-i18n="products.title" class="products-heading"></h2>
+            </div>
 
             <!-- Tabs Navigation -->
             <div class="tabs-nav">
-                <button class="tab-btn active" data-tab="industrial"
-                    data-i18n="products.categories.industrial_oils.title"></button>
-                <button class="tab-btn" data-tab="automotive"
-                    data-i18n="products.categories.automotive_oils.title"></button>
-                <button class="tab-btn" data-tab="grease" data-i18n="products.categories.grease.title"></button>
-                <button class="tab-btn" data-tab="cutting" data-i18n="products.categories.cutting_fluid.title"></button>
-                <button class="tab-btn" data-tab="water" data-i18n="products.categories.water_based.title"></button>
+                <button class="tab-btn active" data-tab="industrial">
+                    <i class="fa-solid fa-industry tab-icon"></i>
+                    <span data-i18n="products.categories.industrial_oils.title"></span>
+                </button>
+                <button class="tab-btn" data-tab="automotive">
+                    <i class="fa-solid fa-car tab-icon"></i>
+                    <span data-i18n="products.categories.automotive_oils.title"></span>
+                </button>
+                <button class="tab-btn" data-tab="grease">
+                    <i class="fa-solid fa-oil-can tab-icon"></i>
+                    <span data-i18n="products.categories.grease.title"></span>
+                </button>
+                <button class="tab-btn" data-tab="cutting">
+                    <i class="fa-solid fa-gears tab-icon"></i>
+                    <span data-i18n="products.categories.cutting_fluid.title"></span>
+                </button>
+                <button class="tab-btn" data-tab="water">
+                    <i class="fa-solid fa-droplet tab-icon"></i>
+                    <span data-i18n="products.categories.water_based.title"></span>
+                </button>
             </div>
 
             <!-- Industrial Oils Category -->
             <div id="industrial" class="tab-content active">
                 <div class="product-category">
-                    <div class="product-grid" id="industrial-grid">
-                        <!-- Products will be dynamically inserted here -->
-                    </div>
+                    <div class="product-grid" id="industrial-grid"></div>
                 </div>
             </div>
 
             <!-- Automotive Oils Category -->
             <div id="automotive" class="tab-content">
                 <div class="product-category">
-                    <div class="product-grid" id="automotive-grid">
-                        <!-- Products will be dynamically inserted here -->
-                    </div>
+                    <div class="product-grid" id="automotive-grid"></div>
                 </div>
             </div>
 
             <!-- Grease Category -->
             <div id="grease" class="tab-content">
                 <div class="product-category">
-                    <div class="product-grid" id="grease-grid">
-                        <!-- Products will be dynamically inserted here -->
-                    </div>
+                    <div class="product-grid" id="grease-grid"></div>
                 </div>
             </div>
 
             <!-- Cutting Fluid Category -->
             <div id="cutting" class="tab-content">
                 <div class="product-category">
-                    <div class="product-grid" id="cutting-grid">
-                        <!-- Products will be dynamically inserted here -->
-                    </div>
+                    <div class="product-grid" id="cutting-grid"></div>
                 </div>
             </div>
 
             <!-- Water-Based Products Category -->
             <div id="water" class="tab-content">
                 <div class="product-category">
-                    <div class="product-grid" id="water-grid">
-                        <!-- Products will be dynamically inserted here -->
-                    </div>
+                    <div class="product-grid" id="water-grid"></div>
                 </div>
             </div>
         </div>
@@ -237,26 +319,48 @@
     <!-- Advantages Section: Why Choose Us -->
     <section id="advantages" class="advantages">
         <div class="container">
-            <h2 data-i18n="advantages.title"></h2>
+            <div class="advantages-header">
+                <div class="advantages-label">
+                    <span class="advantages-label-line"></span>
+                    <span data-i18n="advantages.title" class="advantages-label-text"></span>
+                    <span class="advantages-label-line"></span>
+                </div>
+                <h2 data-i18n="advantages.title" class="advantages-heading"></h2>
+            </div>
             <div class="advantages-grid">
                 <div class="advantage-card">
-                    <i class="fa-solid fa-award"></i>
+                    <span class="advantage-number">01</span>
+                    <div class="advantage-icon-wrap">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
                     <p data-i18n="advantages.list.0"></p>
                 </div>
                 <div class="advantage-card">
-                    <i class="fa-solid fa-flask-vial"></i>
+                    <span class="advantage-number">02</span>
+                    <div class="advantage-icon-wrap">
+                        <i class="fa-solid fa-flask-vial"></i>
+                    </div>
                     <p data-i18n="advantages.list.1"></p>
                 </div>
                 <div class="advantage-card">
-                    <i class="fa-solid fa-truck-fast"></i>
+                    <span class="advantage-number">03</span>
+                    <div class="advantage-icon-wrap">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
                     <p data-i18n="advantages.list.2"></p>
                 </div>
                 <div class="advantage-card">
-                    <i class="fa-solid fa-handshake-angle"></i>
+                    <span class="advantage-number">04</span>
+                    <div class="advantage-icon-wrap">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
                     <p data-i18n="advantages.list.3"></p>
                 </div>
                 <div class="advantage-card">
-                    <i class="fa-solid fa-leaf"></i>
+                    <span class="advantage-number">05</span>
+                    <div class="advantage-icon-wrap">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
                     <p data-i18n="advantages.list.4"></p>
                 </div>
             </div>
@@ -406,34 +510,45 @@
 
     <!-- Footer Section with Company Info -->
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <img src="static/images/darman_image_main.png" data-i18n="header.logo_alt" alt="" class="footer-logo">
-                <p data-i18n="footer.company" class="footer-company-name"></p>
-                <p data-i18n="brand_intro.content" class="footer-desc"></p>
-            </div>
-            <div class="footer-col">
-                <h4 data-i18n="footer.quick_links_title">دسترسی سریع</h4>
-                <ul class="footer-links">
-                    <li><a href="#about" data-i18n="about.title"></a></li>
-                    <li><a href="#products" data-i18n="products.title"></a></li>
-                    <li><a href="#advantages" data-i18n="advantages.title"></a></li>
-                    <li><a href="#download-app" data-i18n="download_app.title"></a></li>
-                    <li><a href="#faq-llm" data-i18n="faq.title"></a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4 data-i18n="footer.contact_title">ارتباط با ما</h4>
-                <div class="footer-contact-info">
-                    <p><span data-i18n="footer.location"></span></p>
-                    <p><span data-i18n="footer.phone_label"></span> <span dir="ltr"
-                            data-i18n="footer.phone_number"></span></p>
+        <div class="footer-glow"></div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo-wrap">
+                        <img src="static/images/darman_image_main.png" data-i18n="header.logo_alt" alt="" class="footer-logo">
+                        <p data-i18n="footer.company" class="footer-company-name"></p>
+                    </div>
+                    <p data-i18n="brand_intro.content" class="footer-desc"></p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.quick_links_title">دسترسی سریع</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about"><i class="fa-solid fa-chevron-left footer-link-icon"></i> <span data-i18n="about.title"></span></a></li>
+                        <li><a href="#products"><i class="fa-solid fa-chevron-left footer-link-icon"></i> <span data-i18n="products.title"></span></a></li>
+                        <li><a href="#advantages"><i class="fa-solid fa-chevron-left footer-link-icon"></i> <span data-i18n="advantages.title"></span></a></li>
+                        <li><a href="#download-app"><i class="fa-solid fa-chevron-left footer-link-icon"></i> <span data-i18n="download_app.title"></span></a></li>
+                        <li><a href="#faq-llm"><i class="fa-solid fa-chevron-left footer-link-icon"></i> <span data-i18n="faq.title"></span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contact_title">ارتباط با ما</h4>
+                    <div class="footer-contact-info">
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <span data-i18n="footer.location"></span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon"><i class="fa-solid fa-phone"></i></div>
+                            <span><span data-i18n="footer.phone_label"></span> <span dir="ltr" data-i18n="footer.phone_number"></span></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="container">
+            <div class="container footer-bottom-inner">
                 <p>&copy; <span id="year"></span> <span data-i18n="footer.copyright"></span></p>
+                <div class="footer-bottom-accent"></div>
             </div>
         </div>
     </footer>

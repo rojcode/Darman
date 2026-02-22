@@ -188,24 +188,43 @@ document.querySelectorAll("section").forEach((section) => {
 
 // Note: Fade-in styles are defined in CSS with initial opacity 0 and transition.
 
-// Enhanced Hover Effects for Product Cards (Additional to CSS)
-document.querySelectorAll(".product-card").forEach((card) => {
-  card.addEventListener("mouseenter", () => {
-    card.style.transform = "scale(1.05)";
+// Staggered Animation for Advantage Cards
+const advantageObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const cards = entry.target.querySelectorAll('.advantage-card');
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('visible');
+        }, index * 120);
+      });
+      advantageObserver.unobserve(entry.target);
+    }
   });
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "scale(1)";
-  });
-});
+}, { threshold: 0.2 });
 
-// Scroll to Top Button Functionality
+const advantagesGrid = document.querySelector('.advantages-grid');
+if (advantagesGrid) {
+  advantageObserver.observe(advantagesGrid);
+}
+
+// Product card hover effects are handled via CSS transforms
+
+// Scroll to Top Button & Header Scroll Effect
 const scrollToTopBtn = document.getElementById("scroll-to-top");
+const headerEl = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > window.innerHeight / 2) {
     scrollToTopBtn.classList.add("show");
   } else {
     scrollToTopBtn.classList.remove("show");
+  }
+  // Header scroll shadow
+  if (window.scrollY > 10) {
+    headerEl.classList.add("scrolled");
+  } else {
+    headerEl.classList.remove("scrolled");
   }
 });
 
@@ -346,6 +365,16 @@ function renderProducts(data) {
       const card = document.createElement("div");
       card.className = "product-card";
 
+      // Category icon map
+      const categoryIcons = {
+        industrial: 'fa-solid fa-industry',
+        automotive: 'fa-solid fa-car',
+        grease: 'fa-solid fa-oil-can',
+        cutting: 'fa-solid fa-gears',
+        water: 'fa-solid fa-droplet'
+      };
+      const iconClass = categoryIcons[category] || 'fa-solid fa-box';
+
       // Applications list
       let appsHtml = "";
       if (product.apps && Array.isArray(product.apps)) {
@@ -367,21 +396,15 @@ function renderProducts(data) {
       }
 
       card.innerHTML = `
-                <h4>${product.title}</h4>
-                <p>${product.desc}</p>
-                <div class="product-details">
-                    ${appsHtml}
-                    ${specsHtml}
+                <div class="product-card-body">
+                    <h4><span class="product-icon"><i class="${iconClass}"></i></span>${product.title}</h4>
+                    <p>${product.desc}</p>
+                    <div class="product-details">
+                        ${appsHtml}
+                        ${specsHtml}
+                    </div>
                 </div>
             `;
-
-      // Re-bind hover effect
-      card.addEventListener("mouseenter", () => {
-        card.style.transform = "scale(1.05)";
-      });
-      card.addEventListener("mouseleave", () => {
-        card.style.transform = "scale(1)";
-      });
 
       container.appendChild(card);
     });

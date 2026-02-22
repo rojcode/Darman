@@ -18,8 +18,10 @@ about:
     - "İran'ın endüstriyel kalbi Kermanshah'ta yerleşik"
 location:
   title: "Fabrika Konumu"
-  content: "Darman Ravankar Pars Fabrikası, Kermanshah, İran'da bulunmaktadır."
-  interact_btn: "Harita ile etkileşim kurmak için tıklayın"
+  content: "Darman Ravankar Pars fabrikası, Zagros Sanayi Sitesi, Bisotun Yolu, Kermanshah, İran'da bulunmaktadır."
+  interact_btn: "Haritayla etkileşimde bulunmak için tıklayın"
+  hours_label: "Çalışma Saatleri:"
+  hours_value: "Cumartesi - Perşembe, 08:00 - 17:00"
 products:
   title: "Ürünlerimiz"
   categories:
@@ -125,7 +127,7 @@ cta:
   button: "Bizimle İletişime Geçin"
 footer:
   company: "Darman Ravankar Pars"
-  location: "Konum: Kermanshah, İran"
+  location: "Adres: Kermanshah, Bisotun Yolu, Zagros Sanayi Sitesi, Kargar Sokak 2"
   phone_label: "Telefon Numarası:"
   phone_number: "0921 972 6349"
   copyright: "Darman Ravankar Pars. Tüm hakları saklıdır."

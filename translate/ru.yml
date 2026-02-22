@@ -18,8 +18,10 @@ about:
     - "Расположен в Керманшахе, промышленном сердце Ирана"
 location:
   title: "Расположение Завода"
-  content: "Завод Darman Ravankar Pars расположен в Керманшахе, Иран."
-  interact_btn: "Нажмите, чтобы взаимодействовать с картой"
+  content: "Завод Darman Ravankar Pars расположен в промышленном парке Загрос, дорога Бисотун, Керманшах, Иран."
+  interact_btn: "Нажмите для взаимодействия с картой"
+  hours_label: "Рабочие часы:"
+  hours_value: "Суббота - Четверг, 8:00 - 17:00"
 products:
   title: "Наши Продукты"
   categories:
@@ -125,7 +127,7 @@ cta:
   button: "Связаться с Нами"
 footer:
   company: "Darman Ravankar Pars"
-  location: "Расположение: Керманшах, Иран"
+  location: "Адрес: Керманшах, дорога Бисотун, Промышленный парк Загрос, ул. Каргар 2"
   phone_label: "Номер Телефона:"
   phone_number: "0921 972 6349"
   copyright: "Darman Ravankar Pars. Все права защищены."
