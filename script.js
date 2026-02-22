@@ -189,21 +189,24 @@ document.querySelectorAll("section").forEach((section) => {
 // Note: Fade-in styles are defined in CSS with initial opacity 0 and transition.
 
 // Staggered Animation for Advantage Cards
-const advantageObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const cards = entry.target.querySelectorAll('.advantage-card');
-      cards.forEach((card, index) => {
-        setTimeout(() => {
-          card.classList.add('visible');
-        }, index * 120);
-      });
-      advantageObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.2 });
+const advantageObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const cards = entry.target.querySelectorAll(".advantage-card");
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add("visible");
+          }, index * 120);
+        });
+        advantageObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 },
+);
 
-const advantagesGrid = document.querySelector('.advantages-grid');
+const advantagesGrid = document.querySelector(".advantages-grid");
 if (advantagesGrid) {
   advantageObserver.observe(advantagesGrid);
 }
@@ -367,13 +370,13 @@ function renderProducts(data) {
 
       // Category icon map
       const categoryIcons = {
-        industrial: 'fa-solid fa-industry',
-        automotive: 'fa-solid fa-car',
-        grease: 'fa-solid fa-oil-can',
-        cutting: 'fa-solid fa-gears',
-        water: 'fa-solid fa-droplet'
+        industrial: "fa-solid fa-industry",
+        automotive: "fa-solid fa-car",
+        grease: "fa-solid fa-oil-can",
+        cutting: "fa-solid fa-gears",
+        water: "fa-solid fa-droplet",
       };
-      const iconClass = categoryIcons[category] || 'fa-solid fa-box';
+      const iconClass = categoryIcons[category] || "fa-solid fa-box";
 
       // Applications list
       let appsHtml = "";
