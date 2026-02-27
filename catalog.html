@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کاتالوگ محصولات — دارمان روانکار پارس</title>
+    <meta name="description"
+        content="کاتالوگ کامل محصولات دارمان روانکار پارس — روغن هیدرولیک، صنعتی، کمپرسور، برش و فرآیندی">
+    <link rel="stylesheet" href="static/css/vazirmatn.css">
+    <link rel="stylesheet" href="static/css/all.min.css">
+    <link rel="stylesheet" href="catalog.css">
+</head>
+
+<body>
+    <!-- Ambient Background -->
+    <div class="catalog-bg">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+        <div class="bg-grid"></div>
+    </div>
+
+    <!-- Top Navigation Bar -->
+    <nav class="catalog-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-back">
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>بازگشت به سایت</span>
+            </a>
+            <div class="nav-brand">
+                <img src="static/images/darman_image_main.png" alt="Darman Logo" class="nav-logo">
+                <span class="nav-title">کاتالوگ محصولات</span>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-btn" id="btn-search" title="جستجو">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="nav-btn" id="btn-presentation" title="حالت پرزنت">
+                    <i class="fa-solid fa-display"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="search-input" placeholder="نام محصول، گرید یا کاربرد را جستجو کنید..."
+                autocomplete="off">
+            <button class="search-close" id="search-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="search-results" id="search-results"></div>
+    </div>
+
+    <!-- Hero / Cover Slide -->
+    <section class="catalog-hero" id="catalog-hero">
+        <div class="hero-content">
+            <div class="hero-badge animate-in">
+                <i class="fa-solid fa-oil-can"></i>
+                <span>کاتالوگ رسمی محصولات</span>
+            </div>
+            <h1 class="hero-title animate-in delay-1">
+                <span class="hero-title-line">دارمان روانکار پارس</span>
+                <span class="hero-title-accent">راهنمای جامع محصولات</span>
+            </h1>
+            <p class="hero-desc animate-in delay-2">تولیدکننده تخصصی انواع روغن صنعتی، هیدرولیک، کمپرسور، برش و محصولات
+                فرآیندی</p>
+            <div class="hero-stats animate-in delay-3">
+                <div class="hero-stat">
+                    <span class="stat-number" data-count="64">0</span>
+                    <span class="stat-label">محصول</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-label">دسته‌بندی</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-count="14">0</span>
+                    <span class="stat-label">زیرگروه</span>
+                </div>
+            </div>
+            <button class="hero-cta animate-in delay-4" id="btn-start">
+                <span>مشاهده کاتالوگ</span>
+                <i class="fa-solid fa-arrow-down"></i>
+            </button>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-ring hero-ring-1"></div>
+            <div class="hero-ring hero-ring-2"></div>
+            <div class="hero-ring hero-ring-3"></div>
+            <div class="hero-center-icon">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Navigation Strip -->
+    <div class="category-strip" id="category-strip">
+        <div class="strip-inner">
+            <!-- Filled by JS -->
+        </div>
+    </div>
+
+    <!-- Product Sections Container -->
+    <main class="catalog-main" id="catalog-main">
+        <!-- Dynamically populated -->
+    </main>
+
+    <!-- Product Detail Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-card" id="modal-card">
+            <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body" id="modal-body">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <div class="fab-group">
+        <button class="fab fab-top" id="fab-top" title="بالا">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="catalog-footer">
+        <div class="footer-inner">
+            <img src="static/images/darman_image_main.png" alt="" class="footer-logo">
+            <p>دارمان روانکار پارس — کرمانشاه، شهرک صنعتی زاگرس</p>
+        </div>
+    </footer>
+
+    <script src="catalog.js"></script>
+</body>
+
+</html>
