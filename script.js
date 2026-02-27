@@ -247,24 +247,39 @@ scrollToTopBtn.addEventListener("click", () => {
   });
 });
 
-// Tab Switching Logic for Products
-document.querySelectorAll(".tab-btn").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const tabId = btn.getAttribute("data-tab");
+// Tab Switching Logic for Products (event delegation on dynamic content)
+const productsDynamic = document.getElementById("products-dynamic-content");
+if (productsDynamic) {
+  productsDynamic.addEventListener("click", (e) => {
+    const btn = e.target.closest(".tab-btn");
+    if (btn) {
+      const tabId = btn.getAttribute("data-tab");
+      productsDynamic
+        .querySelectorAll(".tab-btn")
+        .forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      productsDynamic.querySelectorAll(".tab-content").forEach((content) => {
+        content.classList.remove("active");
+      });
+      const target = document.getElementById(tabId);
+      if (target) target.classList.add("active");
+    }
 
-    // Update buttons
-    document
-      .querySelectorAll(".tab-btn")
-      .forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    // Update content
-    document.querySelectorAll(".tab-content").forEach((content) => {
-      content.classList.remove("active");
-    });
-    document.getElementById(tabId).classList.add("active");
+    // Show More / Show Less toggle
+    const toggleBtn = e.target.closest(".subcategory-toggle-btn");
+    if (toggleBtn) {
+      const subcat = toggleBtn.closest(".product-subcategory");
+      if (subcat) {
+        const isExpanded = subcat.classList.toggle("expanded");
+        const showMoreText = toggleBtn.getAttribute("data-show-more");
+        const showLessText = toggleBtn.getAttribute("data-show-less");
+        toggleBtn.innerHTML = isExpanded
+          ? `${showLessText} <i class="fa-solid fa-chevron-up"></i>`
+          : `${showMoreText} <i class="fa-solid fa-chevron-down"></i>`;
+      }
+    }
   });
-});
+}
 
 // Map Interaction Logic
 const mapOverlay = document.getElementById("map-overlay");
@@ -337,111 +352,194 @@ if (faqAccordion) {
   faqObserver.observe(faqAccordion);
 }
 
-// Render Products dynamically based on translation data
+// Render Products dynamically based on language
 function renderProducts(data) {
-  if (!data.products_detailed) return;
+  const container = document.getElementById("products-dynamic-content");
+  if (!container) return;
 
-  const productsData = data.products_detailed;
-  const items = productsData.items;
-  const common = productsData.common || {};
-  const specLabels = productsData.specs_labels || {};
+  if (currentLang === "fa") {
+    // For Farsi: load from JSON file
+    fetch("translate/products/products-drp-fa.json")
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to load products JSON");
+        return res.json();
+      })
+      .then((products) => {
+        renderProductsFromJSON(products, data, container);
+      })
+      .catch((err) => {
+        console.error("Error loading products JSON:", err);
+        container.innerHTML = "";
+      });
+  } else {
+    // For other languages: show "coming soon" message
+    renderProductsComingSoon(data, container);
+  }
+}
 
-  const categoryMap = {
-    industrial: [
-      "hlp46",
-      "hvlp68",
-      "ht32",
-      "ht68",
-      "to10",
-      "to20",
-      "iso46_turbine",
-      "iso68_turbine",
+// JSON Product category configuration
+const JSON_PRODUCT_TABS = {
+  hydraulic: {
+    label: "روغن‌های هیدرولیک",
+    icon: "fa-solid fa-droplet",
+    subcategories: [
+      { label: "روغن هیدرولیک", indices: [0, 1, 2, 3, 4, 5, 6] },
+      { label: "روغن هیدرولیک Vi", indices: [7, 8, 9, 10, 11, 12, 13] },
+      { label: "روغن هیدرولیک ZF", indices: [14, 15, 16, 17, 18, 19, 20] },
     ],
-    automotive: [
-      "5w30_sp",
-      "10w40_sn",
-      "20w50_sl",
-      "75w90_gl5",
-      "atf_dexron_iii",
-      "psf",
-      "dot4",
-      "dot5_1",
-      "0w20_sn",
-      "5w40_sm",
+  },
+  industrial: {
+    label: "روغن‌های صنعتی",
+    icon: "fa-solid fa-industry",
+    subcategories: [
+      {
+        label: "روغن دنده صنعتی",
+        indices: [21, 22, 23, 24, 25, 26, 27, 28],
+      },
+      { label: "روغن راهنما (سلیدوی)", indices: [29, 30, 31] },
+      { label: "روغن عملیاتی مقاوم", indices: [32, 33, 34, 35] },
+      { label: "روغن عملیاتی مقاوم K", indices: [36, 37, 38, 39] },
     ],
-    grease: ["ep1", "ep2", "ep3", "ep0", "ep4"],
-    cutting: [
-      "cnc_coolant",
-      "premium_coolant",
-      "heavy_duty_coolant",
-      "coolmax",
-      "eco_coolant",
+  },
+  compressor: {
+    label: "روغن کمپرسور",
+    icon: "fa-solid fa-fan",
+    subcategories: [
+      { label: "روغن کمپرسور VDL", indices: [46, 47, 48, 49] },
+      { label: "روغن کمپرسور اسکرو", indices: [50, 51, 52, 53] },
     ],
-    water: [
-      "long_life_antifreeze",
-      "ultra_pure_radiator_water",
-      "battery_water",
-      "red_cool_antifreeze",
-      "standard_radiator_water",
+  },
+  cutting: {
+    label: "روغن برش و آب صابون",
+    icon: "fa-solid fa-gears",
+    subcategories: [
+      { label: "روغن برش", indices: [40, 41, 42, 43, 44, 45] },
+      { label: "مایع برش محلول در آب", indices: [62, 63] },
     ],
+  },
+  process: {
+    label: "روغن‌های فرآیندی",
+    icon: "fa-solid fa-temperature-high",
+    subcategories: [
+      { label: "روغن کوئنچ (عملیات حرارتی)", indices: [54, 55] },
+      { label: "روغن نورد و کشش فلزات", indices: [56, 57, 58, 59] },
+      { label: "روغن انتقال حرارت", indices: [60, 61] },
+    ],
+  },
+};
+
+// Render products from JSON for Farsi
+function renderProductsFromJSON(products, data, container) {
+  const INITIAL_SHOW = 3;
+  const showMoreText = "نمایش بیشتر";
+  const showLessText = "نمایش کمتر";
+
+  // Build tabs navigation
+  let tabsHtml = '<div class="tabs-nav">';
+  let isFirst = true;
+  for (const [tabId, tab] of Object.entries(JSON_PRODUCT_TABS)) {
+    tabsHtml += `
+      <button class="tab-btn${isFirst ? " active" : ""}" data-tab="${tabId}">
+        <i class="${tab.icon} tab-icon"></i>
+        <span>${tab.label}</span>
+      </button>`;
+    isFirst = false;
+  }
+  tabsHtml += "</div>";
+
+  // Build tab contents
+  let contentsHtml = "";
+  isFirst = true;
+  for (const [tabId, tab] of Object.entries(JSON_PRODUCT_TABS)) {
+    contentsHtml += `<div id="${tabId}" class="tab-content${isFirst ? " active" : ""}">`;
+
+    for (const subcat of tab.subcategories) {
+      const subcatProducts = subcat.indices
+        .map((i) => products[i])
+        .filter(Boolean);
+      const hasMore = subcatProducts.length > INITIAL_SHOW;
+
+      contentsHtml += `<div class="product-subcategory${hasMore ? "" : " expanded"}">`;
+      contentsHtml += `<div class="subcategory-header">
+        <h3 class="subcategory-title"><i class="${tab.icon} subcategory-icon"></i> ${subcat.label}</h3>
+        <span class="subcategory-count">${subcatProducts.length} محصول</span>
+      </div>`;
+      contentsHtml += '<div class="product-grid">';
+
+      subcatProducts.forEach((product, idx) => {
+        const info = product.product_info;
+        const hiddenClass = idx >= INITIAL_SHOW ? " product-card-hidden" : "";
+
+        // Key features (max 3)
+        let featuresHtml = "";
+        if (
+          product.key_features &&
+          Array.isArray(product.key_features) &&
+          product.key_features.length > 0
+        ) {
+          const features = product.key_features.slice(0, 3);
+          featuresHtml =
+            '<div class="product-features"><ul>' +
+            features.map((f) => `<li>${f}</li>`).join("") +
+            "</ul></div>";
+        }
+
+        contentsHtml += `
+          <div class="product-card${hiddenClass}">
+            <div class="product-card-body">
+              <h4>
+                <span class="product-icon"><i class="${tab.icon}"></i></span>
+                ${info.name}
+              </h4>
+              <span class="product-grade">${info.standard_grade}</span>
+              <p>${info.description}</p>
+              ${featuresHtml}
+            </div>
+          </div>`;
+      });
+
+      contentsHtml += "</div>"; // .product-grid
+
+      if (hasMore) {
+        contentsHtml += `
+          <button class="subcategory-toggle-btn" data-show-more="${showMoreText}" data-show-less="${showLessText}">
+            ${showMoreText} <i class="fa-solid fa-chevron-down"></i>
+          </button>`;
+      }
+
+      contentsHtml += "</div>"; // .product-subcategory
+    }
+
+    contentsHtml += "</div>"; // .tab-content
+    isFirst = false;
+  }
+
+  container.innerHTML = tabsHtml + contentsHtml;
+}
+
+// Coming soon message for other languages
+function renderProductsComingSoon(data, container) {
+  const messages = {
+    en: "Our team is currently preparing products for your region. Please check back soon!",
+    ar: "فريقنا يعمل حاليًا على تجهيز المنتجات لمنطقتكم. يرجى المراجعة لاحقًا!",
+    tr: "Ekibimiz şu anda bölgeniz için ürünler üzerinde çalışıyor. Lütfen daha sonra tekrar kontrol edin!",
+    ru: "Наша команда в настоящее время работает над продукцией для вашего региона. Пожалуйста, загляните позже!",
+    ur: "ہماری ٹیم فی الحال آپ کے خطے کے لیے مصنوعات پر کام کر رہی ہے۔ براہ کرم بعد میں دوبارہ چیک کریں!",
+    fa: "تیم ما در حال آماده‌سازی محصولات برای منطقه شما هستند. لطفاً بعداً مراجعه کنید!",
   };
 
-  Object.keys(categoryMap).forEach((category) => {
-    const containerId = `${category}-grid`;
-    const container = document.getElementById(containerId);
-    if (!container) return;
+  const message = messages[currentLang] || messages["en"];
 
-    container.innerHTML = ""; // Clear existing content
-
-    categoryMap[category].forEach((productId) => {
-      const product = items[productId];
-      if (!product) return;
-
-      const card = document.createElement("div");
-      card.className = "product-card";
-
-      // Category icon map
-      const categoryIcons = {
-        industrial: "fa-solid fa-industry",
-        automotive: "fa-solid fa-car",
-        grease: "fa-solid fa-oil-can",
-        cutting: "fa-solid fa-gears",
-        water: "fa-solid fa-droplet",
-      };
-      const iconClass = categoryIcons[category] || "fa-solid fa-box";
-
-      // Applications list
-      let appsHtml = "";
-      if (product.apps && Array.isArray(product.apps)) {
-        appsHtml =
-          `<h5>${common.applications || "Applications"}:</h5><ul>` +
-          product.apps.map((app) => `<li>${app}</li>`).join("") +
-          `</ul>`;
-      }
-
-      // Specs list
-      let specsHtml = "";
-      if (product.specs) {
-        specsHtml = `<h5>${common.specs || "Specifications"}:</h5><ul>`;
-        for (const [key, value] of Object.entries(product.specs)) {
-          const label = specLabels[key] || key;
-          specsHtml += `<li><strong>${label}:</strong> ${value}</li>`;
-        }
-        specsHtml += `</ul>`;
-      }
-
-      card.innerHTML = `
-                <div class="product-card-body">
-                    <h4><span class="product-icon"><i class="${iconClass}"></i></span>${product.title}</h4>
-                    <p>${product.desc}</p>
-                    <div class="product-details">
-                        ${appsHtml}
-                        ${specsHtml}
-                    </div>
-                </div>
-            `;
-
-      container.appendChild(card);
-    });
-  });
+  container.innerHTML = `
+    <div class="products-coming-soon">
+      <div class="coming-soon-icon">
+        <i class="fa-solid fa-boxes-stacked"></i>
+      </div>
+      <h3>${message}</h3>
+      <div class="coming-soon-animation">
+        <span class="coming-soon-dot"></span>
+        <span class="coming-soon-dot"></span>
+        <span class="coming-soon-dot"></span>
+      </div>
+    </div>`;
 }
