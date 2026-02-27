@@ -110,6 +110,12 @@ function loadLanguage(lang) {
       newScript.id = "structured-data-script";
       document.head.appendChild(newScript);
 
+      // Show/hide elements that are only for specific languages
+      document.querySelectorAll("[data-lang-only]").forEach((el) => {
+        const allowedLang = el.getAttribute("data-lang-only");
+        el.style.display = allowedLang === lang ? "" : "none";
+      });
+
       // Update dropdown button
       const link = document.querySelector(
         `.dropdown-content a[data-lang="${lang}"]`,

@@ -140,6 +140,28 @@ header .container {
     transform: scale(0.97);
 }
 
+/* Nav Catalog Link */
+.nav-catalog-link {
+    background: linear-gradient(135deg, var(--fluent-primary), #005a9e) !important;
+    color: #fff !important;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 6px 14px !important;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.nav-catalog-link:hover {
+    background: linear-gradient(135deg, #005a9e, #004578) !important;
+    color: #fff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 120, 212, 0.3);
+}
+
+.nav-catalog-link i {
+    font-size: 13px;
+}
+
 /* Nav Download Link with NEW Badge */
 .nav-download-link {
     position: relative;

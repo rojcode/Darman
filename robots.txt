@@ -1,0 +1,21 @@
+# Robots.txt for Darman Ravankar Pars
+# https://drp-oil.ir/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://drp-oil.ir/sitemap.xml
+
+# Block access to internal/duplicate assets
+Disallow: /website-frontend/
+
+# Allow all search engines to crawl main content
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
